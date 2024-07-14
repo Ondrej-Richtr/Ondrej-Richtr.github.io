@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ondřej Richtr on Ondřej Richtr - portfolio</title>
+    <link>https://ondrej-richtr.github.io/</link>
+    <description>Recent content in Ondřej Richtr on Ondřej Richtr - portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+      <language>en</language>
+      <lastBuildDate>Tue, 09 Jul 2024 16:51:42 +0200</lastBuildDate><atom:link href="https://ondrej-richtr.github.io/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
