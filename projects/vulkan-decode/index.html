@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<title>vulkan_decode :: Ondřej Richtr - portfolio</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Module for UltraGrid software that implements video decoding of H.264 coding format using Vulkan Video." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://ondrej-richtr.github.io/projects/vulkan-decode/" />
+<meta property="og:locale" content="en" />
+<meta property="og:title" content="vulkan_decode :: Ondřej Richtr - portfolio" />
+<meta property="og:description" content="Module for UltraGrid software that implements video decoding of H.264 coding format using Vulkan Video." />
+  <meta property="og:type" content="article" />
+  <meta property="article:author" content="Ondřej Richtr - portfolio" />
+<meta property="og:url" content="https://ondrej-richtr.github.io/projects/vulkan-decode/" />
+<meta property="og:site_name" content="Ondřej Richtr - portfolio" />
+<meta property="og:image" content="" />
+<meta property="og:image:width" content="2048" />
+<meta property="og:image:height" content="1024" />
+  
+
+
+<link rel="shortcut icon" href="" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto+Slab:wght@300;400;500&family=Ubuntu+Mono:ital@0;1&display=swap"
+  rel="stylesheet"
+/>
+<link href="/projects/vulkan-decode/" rel="alternate" type="application/rss+xml" title="Ondřej Richtr - portfolio" />
+<link rel="stylesheet" href="https://ondrej-richtr.github.io/styles.8823cf9ff9f4a0a8b9abc618182e4c23b78c56a848f9fdca41b9a6c4a2fe5c3b.css" integrity="sha256-iCPPn/n0oKi5q8YYGC5MI7eMVqhI&#43;f3KQbmmxKL&#43;XDs=" />
+</head>
+
+  <body>
+    <div class="theme-container">
+      <div class="container center">
+        <header class="site-header">
+<nav class="navbar">
+  <div class="navbar__first">
+    <ul class="navbar__list borders">
+      <li><a href="https://ondrej-richtr.github.io/">Home</a></li>
+      <li>
+        <button class="theme-toggle transparent"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"
+  />
+</svg>
+</button>
+      </li>
+    </ul>
+  </div>
+  <div class="navbar__separator"></div>
+    <div class="navbar__last">
+      <ul class="navbar__list borders menu--desktop">
+            <li><a href="/projects/">Projects</a></li>
+            <li><a href="/cv/">CV</a></li></ul>
+      <ul class="menu menu--mobile">
+        <li class="menu-trigger">===</li>
+        <li>
+          <ul class="menu-dropdown">
+                <li><a href="/projects/">Projects</a></li>
+                <li><a href="/cv/">CV</a></li></ul>
+        </li>
+      </ul>
+    </div>
+</nav>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+    <a href="https://ondrej-richtr.github.io/">Home</a>&nbsp;/&nbsp;
+        <a href="https://ondrej-richtr.github.io/projects/">Projects</a>
+  </nav>
+</header>
+        <main class="site-main"><article class="post">
+    <header class="post-header">
+        <h1 class="post-title"><a href="https://ondrej-richtr.github.io/projects/vulkan-decode/">vulkan_decode</a></h1>
+        <div class="post-meta">
+          
+            <span>Year: 2024,</span>
+            <span>Programmed in:</span><span>&nbsp; <b>C</b></span>
+          <br/>
+            <span>Source: <a href="https://github.com/Ondrej-Richtr/UltraGrid">https://github.com/Ondrej-Richtr/UltraGrid</a></span><br/>
+            <span>Link to thesis (in Czech): <a href="https://is.muni.cz/th/s0c33/">https://is.muni.cz/th/s0c33/</a></span><br/>
+        </div>
+        <p class="post-description">Module for UltraGrid software that implements video decoding of H.264 coding format using Vulkan Video.</p>
+    </header>
+      <div class="post-content">
+        <p>A H.264 decoder I made as my bachelor&rsquo;s thesis (text is in Czech, link is <a href="https://is.muni.cz/th/s0c33/">HERE</a>). &lsquo;vulkan_decode&rsquo; is structured as a module for <a href="https://www.ultragrid.cz">UltraGrid</a> (software tool for low latency and high-quality video network transmissions). It&rsquo;s using <a href="https://www.khronos.org/blog/khronos-finalizes-vulkan-video-extensions-for-accelerated-h.264-and-h.265-decode">Vulkan Video API</a> for hardware accelerated decoding. Module is programmed in C, same as majority of UltraGrid.</p>
+<p>This project (thesis) was pretty hardcore sice I only had half a year to program the module and write the text. I also had no knowledge about video coding, H.264 coding format, UltraGrid, Vulkan or Vulkan Video beforehand.
+To not make it too easy, Vulkan actually wants you to parse majority of H.264 bitstream data yourself and also wants you to manually manage reference frames.
+Output frames are in NV12 format, which is not supported in UltraGrid, so the module needs to manually convert them to I420<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.
+But in the end it all works, even though there are few limitations mentioned below.</p>
+<p>I think vulkan_decode module is an interesting achievment as there were only 3 other open source projects<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> that used Vulkan Video for decoding at that time. You can find my fork of UltraGrid with vulkan_decode implementation <a href="https://github.com/Ondrej-Richtr/UltraGrid">HERE</a>.</p>
+
+<h3 id="technical-aspects">
+  Technical aspects
+  <a href="#technical-aspects" class="hanchor" ariaLabel="Anchor"></a>
+</h3>
+<ul>
+<li>Decodes H.264 video only.</li>
+<li>The only supported subsampling is 4:2:0 (Vulkan limitation).</li>
+<li>Works reliably only with <em>high</em> video profile.</li>
+<li>Smoothly decodes 720p@100fps or 1080p@30fps – higher resolutions or fps are possible, but might not get decoded properly in time<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>.</li>
+<li>Should work on all major platforms. However you need to have GPU and driver that supports Vulkan Video.</li>
+</ul>
+
+<h3 id="video-demo">
+  Video Demo
+  <a href="#video-demo" class="hanchor" ariaLabel="Anchor"></a>
+</h3>
+<video width="100%" controls>
+    <source src="https://ondrej-richtr.github.io//vulkan-decode-demo1.mp4" type="video/mp4">
+    Demo video of the SFML game, however your browser does not support the video tag.
+</video>
+<p>This module really needs hardware accelerated conversion of formats, which would dramatically boost it&rsquo;s performance and allow it to decode high-res and/or high-framerate video streams. Since I had only like 4 days to write the whole text of the thesis, I decided to skip this important optimalization.</p>
+<p>Not sure if I will ever work on this again. Maybe if I would get contacted by UltraGrid devs or something like that.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Thanks to lack of time I had to make this conversion happen on CPU. That makes it the biggest bottleneck of the whole decoding process.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://github.com/turanszkij/WickedEngine">WickedEngine</a>, <a href="https://github.com/cyanreg/FFmpeg/tree/vulkan">Lynne&rsquo;s ffmpeg branch</a>, <a href="https://github.com/nvpro-samples/vk_video_samples">NVIDIA&rsquo;s Vulkan Video samples</a>.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>Sadly there was not enough time to implement performance optimalizations.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+      </div>
+
+
+    <footer class="post-footer">
+    </footer>
+  </article>
+        </main>
+        <footer class="site-footer">
+<p class="buildinfo">
+  <time datetime="2024-07-15 18:49:19 CEST">Site built on: 2024-07-15 18:49:19 CEST</time>
+  with <a href="https://gohugo.io">Hugo</a>, using <b>modified</b> theme <a href="https://manid2.github.io/hugo-xterm/">Hugo Xterm</a>.
+
+  
+</p>
+<div class="copyright">
+  <p></p>
+  
+</div>
+
+
+</footer>
+      </div>
+    </div><script type="text/javascript" src="/bundle.min.js"></script>
+</body>
+</html>

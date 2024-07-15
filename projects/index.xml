@@ -149,5 +149,58 @@ You can use it only through command line, but both interactive and non-interacti
 &lt;p&gt;Currently the development on this project is stopped. I wanted to do one more release, but since it&amp;rsquo;s perfectly usable (for me) as is, I decided not to continue with it for now. However this little program proved useful, especially for keeping dates of deadlines during my studies.&lt;/p&gt;
 </content>
     </item>
+    <item>
+      <title>vulkan_decode</title>
+      <link>https://ondrej-richtr.github.io/projects/vulkan-decode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+
+      <guid>https://ondrej-richtr.github.io/projects/vulkan-decode/</guid>
+      <description>A H.264 decoder I made as my bachelor&amp;rsquo;s thesis (text is in Czech, link is HERE). &amp;lsquo;vulkan_decode&amp;rsquo; is structured as a module for UltraGrid (software tool for low latency and high-quality video network transmissions). It&amp;rsquo;s using Vulkan Video API for hardware accelerated decoding. Module is programmed in C, same as majority of UltraGrid.
+This project (thesis) was pretty hardcore sice I only had half a year to program the module and write the text.</description>
+      <content>&lt;p&gt;A H.264 decoder I made as my bachelor&amp;rsquo;s thesis (text is in Czech, link is &lt;a href=&#34;https://is.muni.cz/th/s0c33/&#34;&gt;HERE&lt;/a&gt;). &amp;lsquo;vulkan_decode&amp;rsquo; is structured as a module for &lt;a href=&#34;https://www.ultragrid.cz&#34;&gt;UltraGrid&lt;/a&gt; (software tool for low latency and high-quality video network transmissions). It&amp;rsquo;s using &lt;a href=&#34;https://www.khronos.org/blog/khronos-finalizes-vulkan-video-extensions-for-accelerated-h.264-and-h.265-decode&#34;&gt;Vulkan Video API&lt;/a&gt; for hardware accelerated decoding. Module is programmed in C, same as majority of UltraGrid.&lt;/p&gt;
+&lt;p&gt;This project (thesis) was pretty hardcore sice I only had half a year to program the module and write the text. I also had no knowledge about video coding, H.264 coding format, UltraGrid, Vulkan or Vulkan Video beforehand.
+To not make it too easy, Vulkan actually wants you to parse majority of H.264 bitstream data yourself and also wants you to manually manage reference frames.
+Output frames are in NV12 format, which is not supported in UltraGrid, so the module needs to manually convert them to I420&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.
+But in the end it all works, even though there are few limitations mentioned below.&lt;/p&gt;
+&lt;p&gt;I think vulkan_decode module is an interesting achievment as there were only 3 other open source projects&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; that used Vulkan Video for decoding at that time. You can find my fork of UltraGrid with vulkan_decode implementation &lt;a href=&#34;https://github.com/Ondrej-Richtr/UltraGrid&#34;&gt;HERE&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;technical-aspects&#34;&gt;
+  Technical aspects
+  &lt;a href=&#34;#technical-aspects&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Decodes H.264 video only.&lt;/li&gt;
+&lt;li&gt;The only supported subsampling is 4:2:0 (Vulkan limitation).&lt;/li&gt;
+&lt;li&gt;Works reliably only with &lt;em&gt;high&lt;/em&gt; video profile.&lt;/li&gt;
+&lt;li&gt;Smoothly decodes 720p@100fps or 1080p@30fps – higher resolutions or fps are possible, but might not get decoded properly in time&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/li&gt;
+&lt;li&gt;Should work on all major platforms. However you need to have GPU and driver that supports Vulkan Video.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;video-demo&#34;&gt;
+  Video Demo
+  &lt;a href=&#34;#video-demo&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;video width=&#34;100%&#34; controls&gt;
+    &lt;source src=&#34;https://ondrej-richtr.github.io//vulkan-decode-demo1.mp4&#34; type=&#34;video/mp4&#34;&gt;
+    Demo video of the SFML game, however your browser does not support the video tag.
+&lt;/video&gt;
+&lt;p&gt;This module really needs hardware accelerated conversion of formats, which would dramatically boost it&amp;rsquo;s performance and allow it to decode high-res and/or high-framerate video streams. Since I had only like 4 days to write the whole text of the thesis, I decided to skip this important optimalization.&lt;/p&gt;
+&lt;p&gt;Not sure if I will ever work on this again. Maybe if I would get contacted by UltraGrid devs or something like that.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;Thanks to lack of time I had to make this conversion happen on CPU. That makes it the biggest bottleneck of the whole decoding process.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/turanszkij/WickedEngine&#34;&gt;WickedEngine&lt;/a&gt;, &lt;a href=&#34;https://github.com/cyanreg/FFmpeg/tree/vulkan&#34;&gt;Lynne&amp;rsquo;s ffmpeg branch&lt;/a&gt;, &lt;a href=&#34;https://github.com/nvpro-samples/vk_video_samples&#34;&gt;NVIDIA&amp;rsquo;s Vulkan Video samples&lt;/a&gt;.&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;Sadly there was not enough time to implement performance optimalizations.&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
   </channel>
 </rss>
