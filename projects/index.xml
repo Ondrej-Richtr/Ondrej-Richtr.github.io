@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ondřej Richtr on Ondřej Richtr - portfolio</title>
-    <link>https://ondrej-richtr.github.io/</link>
-    <description>Recent content in Ondřej Richtr on Ondřej Richtr - portfolio</description>
+    <title>Projects on Ondřej Richtr - portfolio</title>
+    <link>https://ondrej-richtr.github.io/projects/</link>
+    <description>Recent content in Projects on Ondřej Richtr - portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
       <language>en</language>
-      <lastBuildDate>Tue, 09 Jul 2024 16:51:42 +0200</lastBuildDate><atom:link href="https://ondrej-richtr.github.io/index.xml" rel="self" type="application/rss+xml" />
+      <lastBuildDate>Tue, 09 Jul 2024 18:07:34 +0200</lastBuildDate><atom:link href="https://ondrej-richtr.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2.5D Side-scroller Game</title>
       <link>https://ondrej-richtr.github.io/projects/raylib-side-scroller/</link>
@@ -88,99 +88,6 @@ I also tried to implement collision mechanics, but they are not finished yet, as
 &lt;a href=&#34;https://ondrej-richtr.github.io//raylib3d-2-crop.PNG&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//raylib3d-2-crop.PNG&#34; alt=&#34;Raylib 3D game - screenshot 2&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;
 &lt;a href=&#34;https://ondrej-richtr.github.io//raylib3d-3.PNG&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//raylib3d-3.PNG&#34; alt=&#34;Raylib 3D game - screenshot 3&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I had to take a break from this project because of my studies, but I plan to return to it. The goal is probably going to be a FPS game with good movement/collision mechanics. I also want to implement my own 3D mesh handling as Raylib is pretty limiting in this regard.&lt;/p&gt;
-</content>
-    </item>
-    <item>
-      <title>CV</title>
-      <link>https://ondrej-richtr.github.io/cv/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-
-      <guid>https://ondrej-richtr.github.io/cv/</guid>
-      <description>Work In Progress.</description>
-      <content>&lt;p&gt;Work In Progress.&lt;/p&gt;
-</content>
-    </item>
-    <item>
-      <title>CV</title>
-      <link>https://ondrej-richtr.github.io/cv_template/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-
-      <guid>https://ondrej-richtr.github.io/cv_template/</guid>
-      <description>Experience Sandvine Technologies 02 Aug 2021 – Present Senior Software Engineer Bangalore, India Working as part of Data-Plane team to develop and maintain features for ActiveLogic product which processes internet packets. Technologies: C, Python, DPDK, NUMA, Data-Plane, TCP/IP, PostgreSQL
-Toshiba Software 21 Dec 2016 – 31 Jul 2019 Software Engineer Bangalore, India Worked in Device Layer development team where I designed &amp;amp; implemented custom size scan for Toshiba Multi-Functional Peripheral (MFP).</description>
-      <content>
-&lt;h2 id=&#34;experience&#34;&gt;
-  Experience
-  &lt;a href=&#34;#experience&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
-&lt;/h2&gt;
-&lt;div class=&#34;cv-experience&#34;&gt;
-  &lt;div class=&#34;row lead&#34;&gt;
-    &lt;span&gt;Sandvine Technologies&lt;/span&gt;
-    &lt;span&gt;02 Aug 2021 – Present&lt;/span&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&#34;row sub&#34;&gt;
-    &lt;span&gt;Senior Software Engineer&lt;/span&gt;
-    &lt;span&gt;Bangalore, India&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Working as part of Data-Plane team to develop and maintain features for
-ActiveLogic product which processes internet packets.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Technologies: C, Python, DPDK, NUMA, Data-Plane, TCP/IP, PostgreSQL&lt;/p&gt;
-&lt;div class=&#34;cv-experience&#34;&gt;
-  &lt;div class=&#34;row lead&#34;&gt;
-    &lt;span&gt;Toshiba Software&lt;/span&gt;
-    &lt;span&gt;21 Dec 2016 – 31 Jul 2019&lt;/span&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&#34;row sub&#34;&gt;
-    &lt;span&gt;Software Engineer&lt;/span&gt;
-    &lt;span&gt;Bangalore, India&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Worked in Device Layer development team where I designed &amp;amp; implemented
-custom size scan for Toshiba Multi-Functional Peripheral (MFP). With this
-feature the users can scan a non-standard paper sizes such as identity
-cards, bills and receipts.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Technologies: C++, C, JPEG, PDF, OpenCV, Linux, Embedded Systems&lt;/p&gt;
-
-&lt;h2 id=&#34;education&#34;&gt;
-  Education
-  &lt;a href=&#34;#education&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
-&lt;/h2&gt;
-&lt;div class=&#34;cv-experience&#34;&gt;
-  &lt;div class=&#34;row lead&#34;&gt;
-    &lt;span&gt;BMS College of Engineering&lt;/span&gt;
-    &lt;span&gt;Aug 2012 - Mar 2016&lt;/span&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&#34;row sub&#34;&gt;
-    &lt;span&gt;Bachelor of Engineering in Electronics and Communications&lt;/span&gt;
-    &lt;span&gt;Bangalore, India&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-&lt;h2 id=&#34;technical-skills&#34;&gt;
-  Technical Skills
-  &lt;a href=&#34;#technical-skills&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;Languages: C, C++, Python&lt;/p&gt;
-&lt;p&gt;Tools: Git, Docker, GDB, Valgrind, Gitlab, Vim, Ctags&lt;/p&gt;
-
-&lt;h2 id=&#34;hobbies&#34;&gt;
-  Hobbies
-  &lt;a href=&#34;#hobbies&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
-&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Hugo theme &lt;a href=&#34;https://manid2.github.io/hugo-xterm/&#34;&gt;manid2/hugo-xterm&lt;/a&gt; for my website &lt;a href=&#34;https://manid2.gitlab.io/&#34;&gt;manid2.gitlab.io&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
 </content>
     </item>
     <item>
