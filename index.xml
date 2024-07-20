@@ -24,6 +24,7 @@ Also that drawing arbitrary 2.5D is not as easy as I thought, you can&amp;rsquo;
   &lt;a href=&#34;#download&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;You can download portable version for &lt;a href=&#34;https://ondrej-richtr.github.io//raylib-2d-v1.zip&#34;&gt;Windows x86_64 here (ZIP).&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: Should work on Linux too when executed through &lt;a href=&#34;https://www.winehq.org/&#34;&gt;Wine&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;controls&#34;&gt;
   Controls
@@ -42,7 +43,7 @@ Also that drawing arbitrary 2.5D is not as easy as I thought, you can&amp;rsquo;
 &lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://ondrej-richtr.github.io//raylib2d-1-crop.PNG&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//raylib2d-1-crop.PNG&#34; alt=&#34;Raylib side-scroller - screenshot 1&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;
 &lt;a href=&#34;https://ondrej-richtr.github.io//raylib2d-2-crop.PNG&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//raylib2d-2-crop.PNG&#34; alt=&#34;Raylib side-scroller - screenshot 2&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;I might work from this project if I ever decide to trully make a 2D game.&lt;/p&gt;
+&lt;p&gt;I might work from this project if I ever decide to truly make a 2D game.&lt;/p&gt;
 </content>
     </item>
     <item>
@@ -63,6 +64,7 @@ I also tried to implement collision mechanics, but they are not finished yet, as
   &lt;a href=&#34;#download&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;You can download portable version for &lt;a href=&#34;https://ondrej-richtr.github.io//raylib-3d-v2.zip&#34;&gt;Windows x86_64 here (ZIP).&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: Should work on Linux too when executed through &lt;a href=&#34;https://www.winehq.org/&#34;&gt;Wine&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;controls&#34;&gt;
   Controls
@@ -96,12 +98,12 @@ I also tried to implement collision mechanics, but they are not finished yet, as
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 
       <guid>https://ondrej-richtr.github.io/cv/</guid>
-      <description>I&amp;rsquo;m 24 years old nerd that found interest in programming, math, electronics, video games and several other technology related stuff. I&amp;rsquo;m quick learner and I enjoy creative activities especially. Even though I&amp;rsquo;m a team player, I prefer individual work.
+      <description>I&amp;rsquo;m 24 years old nerd that found interest in programming, math, electronics, video games and several other technology related stuff. I&amp;rsquo;m quick learner and I enjoy creative activities especially. I like working in a team, however I prefer individual work.
 I currently reside in close proximity to Brno, Czech Republic.
 Experience Managry 2022 - present Development of desktop and mobile application – Frontend/Backend. Oslavany, Czech Republic Development of UI in Flutter, animation system for company mascot and server in Dart.</description>
       <content>&lt;p&gt;I&amp;rsquo;m 24 years old nerd that found interest in programming, math, electronics, video games and several other technology related stuff.
 I&amp;rsquo;m quick learner and I enjoy creative activities especially.
-Even though I&amp;rsquo;m a team player, I prefer individual work.&lt;/p&gt;
+I like working in a team, however I prefer individual work.&lt;/p&gt;
 &lt;p&gt;I currently reside in close proximity to Brno, Czech Republic.&lt;/p&gt;
 
 &lt;h2 id=&#34;experience&#34;&gt;
@@ -122,7 +124,7 @@ Even though I&amp;rsquo;m a team player, I prefer individual work.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Development of UI in Flutter, animation system for company mascot and server in Dart.&lt;/li&gt;
-&lt;li&gt;Used technology: Flutter, Dart, Git.&lt;/li&gt;
+&lt;li&gt;Used technology: Flutter, Dart, Lottie, Git.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;education&#34;&gt;
@@ -143,7 +145,8 @@ Even though I&amp;rsquo;m a team player, I prefer individual work.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Selected study concentration was in Mathematical Informatics.&lt;/li&gt;
-&lt;li&gt;The study was completed &lt;strong&gt;successfully&lt;/strong&gt; 2024/06/24.&lt;/li&gt;
+&lt;li&gt;Bachelor&amp;rsquo;s thesis: &lt;a href=&#34;https://ondrej-richtr.github.io/projects/vulkan-decode/&#34;&gt;Vulkan Video API based Video Decoding Acceleration&lt;/a&gt; (in Czech language).&lt;/li&gt;
+&lt;li&gt;The study was completed &lt;strong&gt;successfully&lt;/strong&gt; 2024-06-24.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;cv-experience&#34;&gt;
   &lt;div class=&#34;row lead&#34;&gt;
@@ -227,7 +230,7 @@ Even though I&amp;rsquo;m a team player, I prefer individual work.&lt;/p&gt;
 &lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Experience with Windows and Linux on user level.&lt;/li&gt;
-&lt;li&gt;Git&lt;/li&gt;
+&lt;li&gt;Git, JIRA&lt;/li&gt;
 &lt;li&gt;Driver&amp;rsquo;s license&lt;/li&gt;
 &lt;/ul&gt;
 
