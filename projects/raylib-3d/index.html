@@ -86,14 +86,14 @@
       <div class="post-content">
         <p>My first attempt at a 3D game. I used simple game programming library <a href="https://www.raylib.com/">Raylib</a> for rendering and I/O.
 Project is (again) entirely in Zig, seems like a good combination with Raylib (except it fails to compile for web).</p>
-<p>The &ldquo;game&rdquo; is just a playground of stuff I was testing out, you can build and delete walls, fly or jump around and there&rsquo;s also a &lsquo;mirror&rsquo; that reflects what you see in the game.
-I also tried to implement collision mechanics, but they are not finished yet, as you can still get stuck in the corners when jumping.</p>
+<p>The &ldquo;game&rdquo; is just a playground of stuff I was testing out, you can build and delete walls or platforms, fly or jump around and there&rsquo;s also a &lsquo;mirror&rsquo; that reflects what you see in the game.
+I also tried to implement collision mechanics, they are getting close to being finished, currently collisions work only with walls, platforms and the ground.</p>
 
 <h3 id="download">
   Download
   <a href="#download" class="hanchor" ariaLabel="Anchor"></a>
 </h3>
-<p>You can download portable version for <a href="https://ondrej-richtr.github.io//raylib-3d-v2.zip">Windows x86_64 here (ZIP).</a></p>
+<p>You can download portable version for <a href="https://ondrej-richtr.github.io//raylib-3d-v3.zip">Windows x86_64 here (ZIP).</a></p>
 <p><em>Note: Should work on Linux too when executed through <a href="https://www.winehq.org/">Wine</a>.</em></p>
 
 <h3 id="controls">
@@ -103,9 +103,11 @@ I also tried to implement collision mechanics, but they are not finished yet, as
 <ul>
 <li><code>Mouse</code> to look.</li>
 <li><code>W</code>, <code>S</code>, <code>A</code>, <code>D</code> to move.</li>
+<li><code>G</code> to teleport to ground level (useful if you clip through the ground).</li>
 <li><code>1</code> to switch into &lsquo;Ray&rsquo; mode - <code>Left Mouse</code> to shoot a ray, <code>Right Mouse</code> to delete all rays.</li>
-<li><code>2</code> to switch into &lsquo;Build&rsquo; mode - Hold <code>Left Mouse</code> to build a wall, <code>Right Mouse</code> to delete new wall, <code>Enter</code> to confirm new wall.</li>
-<li><code>3</code> to switch into &lsquo;Delete&rsquo; mode - <code>Left Mouse</code> to delete a wall you aim at.</li>
+<li><code>2</code> to switch into &lsquo;Build&rsquo; mode - <code>Left/Right Arrows</code> to switch between <em>wall</em> building and <em>platform</em> building, <code>Up/Down Arrows</code> to adjust build height.
+Hold <code>Left Mouse</code> to build a structure, <code>Right Mouse</code> to delete new structure, <code>Enter</code> to confirm new structure.</li>
+<li><code>3</code> to switch into &lsquo;Delete&rsquo; mode - <code>Left Mouse</code> to delete a wall/platform you aim at.</li>
 <li><code>Shift</code> + <code>1</code> to switch into &lsquo;Game view&rsquo; - Standard first person movement with gravity and collisions, use <code>Space</code> key to jump.</li>
 <li><code>Shift</code> + <code>2</code> to switch into &lsquo;Free view&rsquo; - First person free view without gravity and collisions.</li>
 <li><code>Esc</code> to exit the game.</li>
@@ -115,11 +117,14 @@ I also tried to implement collision mechanics, but they are not finished yet, as
   Screenshots
   <a href="#screenshots" class="hanchor" ariaLabel="Anchor"></a>
 </h3>
-<p><a href="https://ondrej-richtr.github.io//raylib3d-4-crop.PNG"><img src="https://ondrej-richtr.github.io//raylib3d-4-crop.PNG" alt="Raylib 3D game - screenshot 4" width="100%"></a>
+<p><em>Note: Screenshots are from older version.</em>
+<a href="https://ondrej-richtr.github.io//raylib3d-4-crop.PNG"><img src="https://ondrej-richtr.github.io//raylib3d-4-crop.PNG" alt="Raylib 3D game - screenshot 4" width="100%"></a>
 <a href="https://ondrej-richtr.github.io//raylib3d-1-crop.PNG"><img src="https://ondrej-richtr.github.io//raylib3d-1-crop.PNG" alt="Raylib 3D game - screenshot 1" width="100%"></a>
 <a href="https://ondrej-richtr.github.io//raylib3d-2-crop.PNG"><img src="https://ondrej-richtr.github.io//raylib3d-2-crop.PNG" alt="Raylib 3D game - screenshot 2" width="100%"></a>
 <a href="https://ondrej-richtr.github.io//raylib3d-3.PNG"><img src="https://ondrej-richtr.github.io//raylib3d-3.PNG" alt="Raylib 3D game - screenshot 3" width="100%"></a></p>
-<p>I had to take a break from this project because of my studies, but I plan to return to it. The goal is probably going to be a FPS game with good movement/collision mechanics. I also want to implement my own 3D mesh handling as Raylib is pretty limiting in this regard.</p>
+<p>I had a break from this project because of my studies, but I returned to it and work on it whenever I can.
+Currently I&rsquo;m working on proper player collision model (something better than a sphere at player&rsquo;s feet) and moving platforms.</p>
+<p>The long term goal is probably going to be a FPS game with good movement/collision mechanics. I also want to implement my own 3D mesh handling as Raylib is pretty limiting in this regard.</p>
 
       </div>
 
@@ -130,7 +135,7 @@ I also tried to implement collision mechanics, but they are not finished yet, as
         </main>
         <footer class="site-footer">
 <p class="buildinfo">
-  <time datetime="2024-07-21 00:57:34 CEST">Site built on: 2024-07-21 00:57:34 CEST</time>
+  <time datetime="2024-07-29 15:49:12 CEST">Site built on: 2024-07-29 15:49:12 CEST</time>
   with <a href="https://gohugo.io">Hugo</a>, using <b>modified</b> theme <a href="https://manid2.github.io/hugo-xterm/">Hugo Xterm</a>.
 
   
