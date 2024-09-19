@@ -86,8 +86,8 @@
       <div class="post-content">
         <p>My first attempt at a 3D game. I used simple game programming library <a href="https://www.raylib.com/">Raylib</a> for rendering and I/O.
 Project is (again) entirely in Zig, seems like a good combination with Raylib (except it fails to compile for web).</p>
-<p>The &ldquo;game&rdquo; is just a playground of stuff I was testing out, you can build and delete walls or platforms, fly or jump around and there&rsquo;s also a &lsquo;mirror&rsquo; that reflects what you see in the game.
-I also tried to implement collision mechanics, they are getting close to being finished, currently collisions work only with walls, platforms and the ground.</p>
+<p>The &ldquo;game&rdquo; is mainly just a playground of stuff I was testing out. You can build, delete or edit simple structures, and there is a short obstacle course that you can try to jump trough - but it proved to be quite a challenge for some people.
+I also implemented some collision mechanics that are getting close to being finished. Even though the collision system is simple it still works nicely even with moving platforms and such.</p>
 
 <h3 id="download">
   Download
@@ -103,14 +103,16 @@ I also tried to implement collision mechanics, they are getting close to being f
 <ul>
 <li><code>Mouse</code> to look.</li>
 <li><code>W</code>, <code>S</code>, <code>A</code>, <code>D</code> to move.</li>
-<li><code>G</code> to teleport to ground level (useful if you clip through the ground).</li>
 <li><code>1</code> to switch into &lsquo;Ray&rsquo; mode - <code>Left Mouse</code> to shoot a ray, <code>Right Mouse</code> to delete all rays.</li>
-<li><code>2</code> to switch into &lsquo;Build&rsquo; mode - <code>Left/Right Arrows</code> to switch between <em>wall</em> building and <em>platform</em> building, <code>Up/Down Arrows</code> to adjust build height.
-Hold <code>Left Mouse</code> to build a structure, <code>Right Mouse</code> to delete new structure, <code>Enter</code> to confirm new structure.</li>
-<li><code>3</code> to switch into &lsquo;Delete&rsquo; mode - <code>Left Mouse</code> to delete a wall/platform you aim at.</li>
+<li><code>2</code> to switch into &lsquo;Build&rsquo; mode - <code>Tab</code> to toggle between build structures (<em>wall</em>, <em>platform</em>, <em>parallelogram</em>), <code>Arrows</code> to move the structure, <code>+</code>/<code>-</code> (or <code>PageUp</code>/<code>PageDown</code>) to adjust build height.
+Hold <code>Left Mouse</code> to build a structure and adjust it&rsquo;s size, <code>Right Mouse</code> to delete new structure, <code>Enter</code> to confirm new structure.</li>
+<li><code>3</code> to switch into &lsquo;Delete&rsquo; mode - <code>Left Mouse</code> to delete the structure you aim at.</li>
+<li><code>4</code> to switch into &lsquo;Edit&rsquo; mode - <code>Left Mouse</code> to select existing structure for editing, <code>Right Mouse</code> or <code>Enter</code> to stop editing. <code>Arrows</code> to move the edited structure, <code>+</code>/<code>-</code> (or <code>PageUp</code>/<code>PageDown</code>) to adjust it&rsquo;s height or vertical position, <code>Q</code>/<code>E</code> to rotate it along the <em>Z</em> axis, <code>Z</code>/<code>X</code> to rotate it along the <em>X</em> axis, <code>C</code>/<code>V</code> to rotate it along the <em>Y</em> axis.</li>
 <li><code>Shift</code> + <code>1</code> to switch into &lsquo;Game view&rsquo; - Standard first person movement with gravity and collisions, use <code>Space</code> key to jump.</li>
 <li><code>Shift</code> + <code>2</code> to switch into &lsquo;Free view&rsquo; - First person free view without gravity and collisions.</li>
-<li><code>Esc</code> to exit the game.</li>
+<li><code>G</code> to teleport to ground level.</li>
+<li><code>H</code> to show/hide collision boxes.</li>
+<li><code>Esc</code> or <code>P</code> to pause the game and then <code>P</code> for unpause or <code>Esc</code> to quit the game.</li>
 </ul>
 
 <h3 id="screenshots">
@@ -123,8 +125,8 @@ Hold <code>Left Mouse</code> to build a structure, <code>Right Mouse</code> to d
 <a href="https://ondrej-richtr.github.io//raylib3d-2-crop.PNG"><img src="https://ondrej-richtr.github.io//raylib3d-2-crop.PNG" alt="Raylib 3D game - screenshot 2" width="100%"></a>
 <a href="https://ondrej-richtr.github.io//raylib3d-3.PNG"><img src="https://ondrej-richtr.github.io//raylib3d-3.PNG" alt="Raylib 3D game - screenshot 3" width="100%"></a></p>
 <p>I had a break from this project because of my studies, but I returned to it and work on it whenever I can.
-Currently I&rsquo;m working on proper player collision model (something better than a sphere at player&rsquo;s feet) and moving platforms.</p>
-<p>The long term goal is probably going to be a FPS game with good movement/collision mechanics. I also want to implement my own 3D mesh handling as Raylib is pretty limiting in this regard.</p>
+Currently I&rsquo;m working on proper player collision system and I also started to experiment with lighting.</p>
+<p>The long term goal is probably going to be a FPS game with good movement/collision mechanics. I also want to implement my own 3D mesh handling as Raylib is pretty limiting in this regard <em>(maybe the real goal would be to remove Raylib altogether?)</em>.</p>
 
       </div>
 
@@ -135,7 +137,7 @@ Currently I&rsquo;m working on proper player collision model (something better t
         </main>
         <footer class="site-footer">
 <p class="buildinfo">
-  <time datetime="2024-09-14 18:02:49 CEST">Site built on: 2024-09-14 18:02:49 CEST</time>
+  <time datetime="2024-09-20 00:14:51 CEST">Site built on: 2024-09-20 00:14:51 CEST</time>
   with <a href="https://gohugo.io">Hugo</a>, using <b>modified</b> theme <a href="https://manid2.github.io/hugo-xterm/">Hugo Xterm</a>.
 
   

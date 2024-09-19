@@ -53,11 +53,11 @@ Also that drawing arbitrary 2.5D is not as easy as I thought, you can&amp;rsquo;
 
       <guid>https://ondrej-richtr.github.io/projects/raylib-3d/</guid>
       <description>My first attempt at a 3D game. I used simple game programming library Raylib for rendering and I/O. Project is (again) entirely in Zig, seems like a good combination with Raylib (except it fails to compile for web).
-The &amp;ldquo;game&amp;rdquo; is just a playground of stuff I was testing out, you can build and delete walls or platforms, fly or jump around and there&amp;rsquo;s also a &amp;lsquo;mirror&amp;rsquo; that reflects what you see in the game.</description>
+The &amp;ldquo;game&amp;rdquo; is mainly just a playground of stuff I was testing out. You can build, delete or edit simple structures, and there is a short obstacle course that you can try to jump trough - but it proved to be quite a challenge for some people.</description>
       <content>&lt;p&gt;My first attempt at a 3D game. I used simple game programming library &lt;a href=&#34;https://www.raylib.com/&#34;&gt;Raylib&lt;/a&gt; for rendering and I/O.
 Project is (again) entirely in Zig, seems like a good combination with Raylib (except it fails to compile for web).&lt;/p&gt;
-&lt;p&gt;The &amp;ldquo;game&amp;rdquo; is just a playground of stuff I was testing out, you can build and delete walls or platforms, fly or jump around and there&amp;rsquo;s also a &amp;lsquo;mirror&amp;rsquo; that reflects what you see in the game.
-I also tried to implement collision mechanics, they are getting close to being finished, currently collisions work only with walls, platforms and the ground.&lt;/p&gt;
+&lt;p&gt;The &amp;ldquo;game&amp;rdquo; is mainly just a playground of stuff I was testing out. You can build, delete or edit simple structures, and there is a short obstacle course that you can try to jump trough - but it proved to be quite a challenge for some people.
+I also implemented some collision mechanics that are getting close to being finished. Even though the collision system is simple it still works nicely even with moving platforms and such.&lt;/p&gt;
 
 &lt;h3 id=&#34;download&#34;&gt;
   Download
@@ -73,14 +73,16 @@ I also tried to implement collision mechanics, they are getting close to being f
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;Mouse&lt;/code&gt; to look.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;W&lt;/code&gt;, &lt;code&gt;S&lt;/code&gt;, &lt;code&gt;A&lt;/code&gt;, &lt;code&gt;D&lt;/code&gt; to move.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;G&lt;/code&gt; to teleport to ground level (useful if you clip through the ground).&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;1&lt;/code&gt; to switch into &amp;lsquo;Ray&amp;rsquo; mode - &lt;code&gt;Left Mouse&lt;/code&gt; to shoot a ray, &lt;code&gt;Right Mouse&lt;/code&gt; to delete all rays.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;2&lt;/code&gt; to switch into &amp;lsquo;Build&amp;rsquo; mode - &lt;code&gt;Left/Right Arrows&lt;/code&gt; to switch between &lt;em&gt;wall&lt;/em&gt; building and &lt;em&gt;platform&lt;/em&gt; building, &lt;code&gt;Up/Down Arrows&lt;/code&gt; to adjust build height.
-Hold &lt;code&gt;Left Mouse&lt;/code&gt; to build a structure, &lt;code&gt;Right Mouse&lt;/code&gt; to delete new structure, &lt;code&gt;Enter&lt;/code&gt; to confirm new structure.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;3&lt;/code&gt; to switch into &amp;lsquo;Delete&amp;rsquo; mode - &lt;code&gt;Left Mouse&lt;/code&gt; to delete a wall/platform you aim at.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;2&lt;/code&gt; to switch into &amp;lsquo;Build&amp;rsquo; mode - &lt;code&gt;Tab&lt;/code&gt; to toggle between build structures (&lt;em&gt;wall&lt;/em&gt;, &lt;em&gt;platform&lt;/em&gt;, &lt;em&gt;parallelogram&lt;/em&gt;), &lt;code&gt;Arrows&lt;/code&gt; to move the structure, &lt;code&gt;+&lt;/code&gt;/&lt;code&gt;-&lt;/code&gt; (or &lt;code&gt;PageUp&lt;/code&gt;/&lt;code&gt;PageDown&lt;/code&gt;) to adjust build height.
+Hold &lt;code&gt;Left Mouse&lt;/code&gt; to build a structure and adjust it&amp;rsquo;s size, &lt;code&gt;Right Mouse&lt;/code&gt; to delete new structure, &lt;code&gt;Enter&lt;/code&gt; to confirm new structure.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;3&lt;/code&gt; to switch into &amp;lsquo;Delete&amp;rsquo; mode - &lt;code&gt;Left Mouse&lt;/code&gt; to delete the structure you aim at.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;4&lt;/code&gt; to switch into &amp;lsquo;Edit&amp;rsquo; mode - &lt;code&gt;Left Mouse&lt;/code&gt; to select existing structure for editing, &lt;code&gt;Right Mouse&lt;/code&gt; or &lt;code&gt;Enter&lt;/code&gt; to stop editing. &lt;code&gt;Arrows&lt;/code&gt; to move the edited structure, &lt;code&gt;+&lt;/code&gt;/&lt;code&gt;-&lt;/code&gt; (or &lt;code&gt;PageUp&lt;/code&gt;/&lt;code&gt;PageDown&lt;/code&gt;) to adjust it&amp;rsquo;s height or vertical position, &lt;code&gt;Q&lt;/code&gt;/&lt;code&gt;E&lt;/code&gt; to rotate it along the &lt;em&gt;Z&lt;/em&gt; axis, &lt;code&gt;Z&lt;/code&gt;/&lt;code&gt;X&lt;/code&gt; to rotate it along the &lt;em&gt;X&lt;/em&gt; axis, &lt;code&gt;C&lt;/code&gt;/&lt;code&gt;V&lt;/code&gt; to rotate it along the &lt;em&gt;Y&lt;/em&gt; axis.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;1&lt;/code&gt; to switch into &amp;lsquo;Game view&amp;rsquo; - Standard first person movement with gravity and collisions, use &lt;code&gt;Space&lt;/code&gt; key to jump.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;2&lt;/code&gt; to switch into &amp;lsquo;Free view&amp;rsquo; - First person free view without gravity and collisions.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Esc&lt;/code&gt; to exit the game.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;G&lt;/code&gt; to teleport to ground level.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;H&lt;/code&gt; to show/hide collision boxes.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Esc&lt;/code&gt; or &lt;code&gt;P&lt;/code&gt; to pause the game and then &lt;code&gt;P&lt;/code&gt; for unpause or &lt;code&gt;Esc&lt;/code&gt; to quit the game.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;screenshots&#34;&gt;
@@ -93,8 +95,8 @@ Hold &lt;code&gt;Left Mouse&lt;/code&gt; to build a structure, &lt;code&gt;Right
 &lt;a href=&#34;https://ondrej-richtr.github.io//raylib3d-2-crop.PNG&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//raylib3d-2-crop.PNG&#34; alt=&#34;Raylib 3D game - screenshot 2&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;
 &lt;a href=&#34;https://ondrej-richtr.github.io//raylib3d-3.PNG&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//raylib3d-3.PNG&#34; alt=&#34;Raylib 3D game - screenshot 3&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I had a break from this project because of my studies, but I returned to it and work on it whenever I can.
-Currently I&amp;rsquo;m working on proper player collision model (something better than a sphere at player&amp;rsquo;s feet) and moving platforms.&lt;/p&gt;
-&lt;p&gt;The long term goal is probably going to be a FPS game with good movement/collision mechanics. I also want to implement my own 3D mesh handling as Raylib is pretty limiting in this regard.&lt;/p&gt;
+Currently I&amp;rsquo;m working on proper player collision system and I also started to experiment with lighting.&lt;/p&gt;
+&lt;p&gt;The long term goal is probably going to be a FPS game with good movement/collision mechanics. I also want to implement my own 3D mesh handling as Raylib is pretty limiting in this regard &lt;em&gt;(maybe the real goal would be to remove Raylib altogether?)&lt;/em&gt;.&lt;/p&gt;
 </content>
     </item>
     <item>
