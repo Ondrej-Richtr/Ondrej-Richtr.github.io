@@ -63,7 +63,7 @@ I also implemented some collision mechanics that are getting close to being fini
   Download
   &lt;a href=&#34;#download&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;You can download portable version for &lt;a href=&#34;https://ondrej-richtr.github.io//raylib-3d-v5.zip&#34;&gt;Windows x86_64 here (ZIP).&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can download portable version for &lt;a href=&#34;https://ondrej-richtr.github.io//raylib-3d-v6.zip&#34;&gt;Windows x86_64 here (ZIP).&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Note: Should work on Linux too when executed through &lt;a href=&#34;https://www.winehq.org/&#34;&gt;Wine&lt;/a&gt;, but I noticed some issues with number keys not working.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;controls&#34;&gt;
