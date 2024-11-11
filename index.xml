@@ -59,6 +59,12 @@ Project is (again) entirely in Zig, seems like a good combination with Raylib (e
 &lt;p&gt;The &amp;ldquo;game&amp;rdquo; is mainly just a playground of stuff I was testing out. You can build, delete or edit simple structures, and there is a short obstacle course that you can try to jump trough - but it proved to be quite a challenge for some people.
 I also implemented some collision mechanics that are getting close to being finished. Even though the collision system is simple it still works nicely even with moving platforms and such.&lt;/p&gt;
 
+&lt;h3 id=&#34;play-in-the-browser&#34;&gt;
+  Play in the browser!
+  &lt;a href=&#34;#play-in-the-browser&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;You can test the game in your browser &lt;a href=&#34;https://ondrej-richtr.github.io//games/raylib3d_project.html&#34;&gt;HERE.&lt;/a&gt;&lt;/p&gt;
+
 &lt;h3 id=&#34;download&#34;&gt;
   Download
   &lt;a href=&#34;#download&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
