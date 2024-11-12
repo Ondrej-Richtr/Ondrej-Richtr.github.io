@@ -52,24 +52,26 @@ Also that drawing arbitrary 2.5D is not as easy as I thought, you can&amp;rsquo;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 
       <guid>https://ondrej-richtr.github.io/projects/raylib-3d/</guid>
-      <description>My first attempt at a 3D game. I used simple game programming library Raylib for rendering and I/O. Project is (again) entirely in Zig, seems like a good combination with Raylib (except it fails to compile for web).
+      <description>My first attempt at a 3D game. I used simple game programming library Raylib for rendering and I/O. Project is (again) entirely in Zig, seems like a good combination with Raylib.
 The &amp;ldquo;game&amp;rdquo; is mainly just a playground of stuff I was testing out. You can build, delete or edit simple structures, and there is a short obstacle course that you can try to jump trough - but it proved to be quite a challenge for some people.</description>
       <content>&lt;p&gt;My first attempt at a 3D game. I used simple game programming library &lt;a href=&#34;https://www.raylib.com/&#34;&gt;Raylib&lt;/a&gt; for rendering and I/O.
-Project is (again) entirely in Zig, seems like a good combination with Raylib (except it fails to compile for web).&lt;/p&gt;
+Project is (again) entirely in Zig, seems like a good combination with Raylib.&lt;/p&gt;
 &lt;p&gt;The &amp;ldquo;game&amp;rdquo; is mainly just a playground of stuff I was testing out. You can build, delete or edit simple structures, and there is a short obstacle course that you can try to jump trough - but it proved to be quite a challenge for some people.
-I also implemented some collision mechanics that are getting close to being finished. Even though the collision system is simple it still works nicely even with moving platforms and such.&lt;/p&gt;
+I also implemented my own version of collision mechanics. Even though the collision system is simple it still works nicely even with moving platforms and such.&lt;/p&gt;
 
-&lt;h3 id=&#34;play-in-the-browser&#34;&gt;
-  Play in the browser!
-  &lt;a href=&#34;#play-in-the-browser&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;h3 id=&#34;browser-version&#34;&gt;
+  Browser version
+  &lt;a href=&#34;#browser-version&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;You can test the game in your browser &lt;a href=&#34;https://ondrej-richtr.github.io//games/raylib3d_project.html&#34;&gt;HERE.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Play in your browser!&lt;/strong&gt;
+You can test the web version of the game &lt;a href=&#34;https://ondrej-richtr.github.io//games/raylib3d_project.html&#34;&gt;HERE.&lt;/a&gt; Requires WebAssembly and WebGL.&lt;/p&gt;
+&lt;p&gt;The browser version is compiled using &lt;a href=&#34;https://emscripten.org/&#34;&gt;emscripten&lt;/a&gt; in combination with Zig build system. It works okayish, emscripten automatically sets fps equal to your device refresh rate (usually 60), so the game runs slower than usual. It also works on mobile devices, but I didn&amp;rsquo;t implement proper touch controls yet, so it isn&amp;rsquo;t really playable there.&lt;/p&gt;
 
 &lt;h3 id=&#34;download&#34;&gt;
   Download
   &lt;a href=&#34;#download&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;You can download portable version for &lt;a href=&#34;https://ondrej-richtr.github.io//raylib-3d-v6.zip&#34;&gt;Windows x86_64 here (ZIP).&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can download portable version for &lt;a href=&#34;https://ondrej-richtr.github.io//raylib-3d-v8.zip&#34;&gt;Windows x86_64 here (ZIP).&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Note: Should work on Linux too when executed through &lt;a href=&#34;https://www.winehq.org/&#34;&gt;Wine&lt;/a&gt;, but I noticed some issues with number keys not working.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;controls&#34;&gt;
@@ -88,7 +90,7 @@ Hold &lt;code&gt;Left Mouse&lt;/code&gt; to build a structure and adjust it&amp;
 &lt;li&gt;&lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;2&lt;/code&gt; to switch into &amp;lsquo;Free view&amp;rsquo; - First person free view without gravity and collisions.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;G&lt;/code&gt; to teleport to ground level.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;H&lt;/code&gt; to show/hide collision boxes.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Esc&lt;/code&gt; or &lt;code&gt;P&lt;/code&gt; to pause the game and then &lt;code&gt;P&lt;/code&gt; for unpause or &lt;code&gt;Esc&lt;/code&gt; to quit the game.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Esc&lt;/code&gt; or &lt;code&gt;P&lt;/code&gt; to pause the game and then &lt;code&gt;Esc&lt;/code&gt; for unpause or &lt;code&gt;Q&lt;/code&gt; to quit the game.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;screenshots&#34;&gt;
@@ -102,7 +104,7 @@ Hold &lt;code&gt;Left Mouse&lt;/code&gt; to build a structure and adjust it&amp;
 &lt;a href=&#34;https://ondrej-richtr.github.io//raylib3d-3.PNG&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//raylib3d-3.PNG&#34; alt=&#34;Raylib 3D game - screenshot 3&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I had a break from this project because of my studies, but I returned to it and work on it whenever I can.
 Currently I&amp;rsquo;m working on proper player collision system and I also started to experiment with lighting.&lt;/p&gt;
-&lt;p&gt;The long term goal is probably going to be a FPS game with good movement/collision mechanics. I also want to implement my own 3D mesh handling as Raylib is pretty limiting in this regard &lt;em&gt;(maybe the real goal would be to remove Raylib altogether?)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The long term goal is probably going to be a FPS game with good movement/collision mechanics. I also want to implement my own 3D mesh handling as Raylib is pretty limiting in this regard &lt;em&gt;(maybe the real goal would be to remove Raylib altogether?)&lt;/em&gt;. Nicer in-game level editor would be great as well, but the existing one is usable too.&lt;/p&gt;
 </content>
     </item>
     <item>
@@ -111,10 +113,10 @@ Currently I&amp;rsquo;m working on proper player collision system and I also sta
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 
       <guid>https://ondrej-richtr.github.io/cv/</guid>
-      <description>I&amp;rsquo;m 24 years old nerd from Czech Republic that found interest in programming, math, electronics, video games and several other technology related stuff. I&amp;rsquo;m quick learner and I enjoy creative activities especially. I like working in a team, however I prefer individual work.
+      <description>I&amp;rsquo;m 25 years old nerd from Czech Republic that found interest in programming, math, electronics, video games and several other technology related stuff. I&amp;rsquo;m quick learner and I enjoy creative activities especially. I like working in a team, however I prefer individual work.
 I currently reside in close proximity to Brno, Czech Republic.
-Experience Managry 2022 - present Development of desktop and mobile application – Frontend/Backend. Oslavany, Czech Republic Development of UI in Flutter, animation system for company mascot and server in Dart.</description>
-      <content>&lt;p&gt;I&amp;rsquo;m 24 years old nerd from Czech Republic that found interest in programming, math, electronics, video games and several other technology related stuff.
+Experience Managry 2022 - 2024 Development of desktop and mobile application – Frontend/Backend. Oslavany, Czech Republic Development of UI in Flutter, animation system for company mascot and server in Dart.</description>
+      <content>&lt;p&gt;I&amp;rsquo;m 25 years old nerd from Czech Republic that found interest in programming, math, electronics, video games and several other technology related stuff.
 I&amp;rsquo;m quick learner and I enjoy creative activities especially.
 I like working in a team, however I prefer individual work.&lt;/p&gt;
 &lt;p&gt;I currently reside in close proximity to Brno, Czech Republic.&lt;/p&gt;
@@ -126,7 +128,7 @@ I like working in a team, however I prefer individual work.&lt;/p&gt;
 &lt;div class=&#34;cv-experience&#34;&gt;
   &lt;div class=&#34;row lead&#34;&gt;
     &lt;span&gt;Managry&lt;/span&gt;
-    &lt;span&gt;2022 - present&lt;/span&gt;
+    &lt;span&gt;2022 - 2024&lt;/span&gt;
   &lt;/div&gt;
 
   &lt;div class=&#34;row sub&#34;&gt;

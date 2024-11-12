@@ -85,21 +85,23 @@
     </header>
       <div class="post-content">
         <p>My first attempt at a 3D game. I used simple game programming library <a href="https://www.raylib.com/">Raylib</a> for rendering and I/O.
-Project is (again) entirely in Zig, seems like a good combination with Raylib (except it fails to compile for web).</p>
+Project is (again) entirely in Zig, seems like a good combination with Raylib.</p>
 <p>The &ldquo;game&rdquo; is mainly just a playground of stuff I was testing out. You can build, delete or edit simple structures, and there is a short obstacle course that you can try to jump trough - but it proved to be quite a challenge for some people.
-I also implemented some collision mechanics that are getting close to being finished. Even though the collision system is simple it still works nicely even with moving platforms and such.</p>
+I also implemented my own version of collision mechanics. Even though the collision system is simple it still works nicely even with moving platforms and such.</p>
 
-<h3 id="play-in-the-browser">
-  Play in the browser!
-  <a href="#play-in-the-browser" class="hanchor" ariaLabel="Anchor"></a>
+<h3 id="browser-version">
+  Browser version
+  <a href="#browser-version" class="hanchor" ariaLabel="Anchor"></a>
 </h3>
-<p>You can test the game in your browser <a href="https://ondrej-richtr.github.io//games/raylib3d_project.html">HERE.</a></p>
+<p><strong>Play in your browser!</strong>
+You can test the web version of the game <a href="https://ondrej-richtr.github.io//games/raylib3d_project.html">HERE.</a> Requires WebAssembly and WebGL.</p>
+<p>The browser version is compiled using <a href="https://emscripten.org/">emscripten</a> in combination with Zig build system. It works okayish, emscripten automatically sets fps equal to your device refresh rate (usually 60), so the game runs slower than usual. It also works on mobile devices, but I didn&rsquo;t implement proper touch controls yet, so it isn&rsquo;t really playable there.</p>
 
 <h3 id="download">
   Download
   <a href="#download" class="hanchor" ariaLabel="Anchor"></a>
 </h3>
-<p>You can download portable version for <a href="https://ondrej-richtr.github.io//raylib-3d-v6.zip">Windows x86_64 here (ZIP).</a></p>
+<p>You can download portable version for <a href="https://ondrej-richtr.github.io//raylib-3d-v8.zip">Windows x86_64 here (ZIP).</a></p>
 <p><em>Note: Should work on Linux too when executed through <a href="https://www.winehq.org/">Wine</a>, but I noticed some issues with number keys not working.</em></p>
 
 <h3 id="controls">
@@ -118,7 +120,7 @@ Hold <code>Left Mouse</code> to build a structure and adjust it&rsquo;s size, <c
 <li><code>Shift</code> + <code>2</code> to switch into &lsquo;Free view&rsquo; - First person free view without gravity and collisions.</li>
 <li><code>G</code> to teleport to ground level.</li>
 <li><code>H</code> to show/hide collision boxes.</li>
-<li><code>Esc</code> or <code>P</code> to pause the game and then <code>P</code> for unpause or <code>Esc</code> to quit the game.</li>
+<li><code>Esc</code> or <code>P</code> to pause the game and then <code>Esc</code> for unpause or <code>Q</code> to quit the game.</li>
 </ul>
 
 <h3 id="screenshots">
@@ -132,7 +134,7 @@ Hold <code>Left Mouse</code> to build a structure and adjust it&rsquo;s size, <c
 <a href="https://ondrej-richtr.github.io//raylib3d-3.PNG"><img src="https://ondrej-richtr.github.io//raylib3d-3.PNG" alt="Raylib 3D game - screenshot 3" width="100%"></a></p>
 <p>I had a break from this project because of my studies, but I returned to it and work on it whenever I can.
 Currently I&rsquo;m working on proper player collision system and I also started to experiment with lighting.</p>
-<p>The long term goal is probably going to be a FPS game with good movement/collision mechanics. I also want to implement my own 3D mesh handling as Raylib is pretty limiting in this regard <em>(maybe the real goal would be to remove Raylib altogether?)</em>.</p>
+<p>The long term goal is probably going to be a FPS game with good movement/collision mechanics. I also want to implement my own 3D mesh handling as Raylib is pretty limiting in this regard <em>(maybe the real goal would be to remove Raylib altogether?)</em>. Nicer in-game level editor would be great as well, but the existing one is usable too.</p>
 
       </div>
 
@@ -143,7 +145,7 @@ Currently I&rsquo;m working on proper player collision system and I also started
         </main>
         <footer class="site-footer">
 <p class="buildinfo">
-  <time datetime="2024-11-11 16:49:27 CET">Site built on: 2024-11-11 16:49:27 CET</time>
+  <time datetime="2024-11-12 02:16:51 CET">Site built on: 2024-11-12 02:16:51 CET</time>
   with <a href="https://gohugo.io">Hugo</a>, using <b>modified</b> theme <a href="https://manid2.github.io/hugo-xterm/">Hugo Xterm</a>.
 
   
