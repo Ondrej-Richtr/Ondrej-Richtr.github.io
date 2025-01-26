@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<title>Target practice game :: Ondřej Richtr - portfolio</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Game core made using OpenGL, supposed to be first person target shooter." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://ondrej-richtr.github.io/projects/target-practice/" />
+<meta property="og:locale" content="en" />
+<meta property="og:title" content="Target practice game :: Ondřej Richtr - portfolio" />
+<meta property="og:description" content="Game core made using OpenGL, supposed to be first person target shooter." />
+  <meta property="og:type" content="article" />
+  <meta property="article:author" content="Ondřej Richtr - portfolio" />
+<meta property="og:url" content="https://ondrej-richtr.github.io/projects/target-practice/" />
+<meta property="og:site_name" content="Ondřej Richtr - portfolio" />
+<meta property="og:image" content="" />
+<meta property="og:image:width" content="2048" />
+<meta property="og:image:height" content="1024" />
+  
+
+
+<link rel="shortcut icon" href="" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto+Slab:wght@300;400;500&family=Ubuntu+Mono:ital@0;1&display=swap"
+  rel="stylesheet"
+/>
+<link href="/projects/target-practice/" rel="alternate" type="application/rss+xml" title="Ondřej Richtr - portfolio" />
+<link rel="stylesheet" href="https://ondrej-richtr.github.io/styles.8823cf9ff9f4a0a8b9abc618182e4c23b78c56a848f9fdca41b9a6c4a2fe5c3b.css" integrity="sha256-iCPPn/n0oKi5q8YYGC5MI7eMVqhI&#43;f3KQbmmxKL&#43;XDs=" />
+</head>
+
+  <body>
+    <div class="theme-container">
+      <div class="container center">
+        <header class="site-header">
+<nav class="navbar">
+  <div class="navbar__first">
+    <ul class="navbar__list borders">
+      <li><a href="https://ondrej-richtr.github.io/">Home</a></li>
+      <li>
+        <button class="theme-toggle transparent"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"
+  />
+</svg>
+</button>
+      </li>
+    </ul>
+  </div>
+  <div class="navbar__separator"></div>
+    <div class="navbar__last">
+      <ul class="navbar__list borders menu--desktop">
+            <li><a href="/projects/">Projects</a></li>
+            <li><a href="/cv/">CV</a></li></ul>
+      <ul class="menu menu--mobile">
+        <li class="menu-trigger">===</li>
+        <li>
+          <ul class="menu-dropdown">
+                <li><a href="/projects/">Projects</a></li>
+                <li><a href="/cv/">CV</a></li></ul>
+        </li>
+      </ul>
+    </div>
+</nav>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+    <a href="https://ondrej-richtr.github.io/">Home</a>&nbsp;/&nbsp;
+        <a href="https://ondrej-richtr.github.io/projects/">Projects</a>
+  </nav>
+</header>
+        <main class="site-main"><article class="post">
+    <header class="post-header">
+        <h1 class="post-title"><a href="https://ondrej-richtr.github.io/projects/target-practice/">Target practice game</a></h1>
+        <div class="post-meta">
+          
+            <span>Year: 2025,</span>
+            <span>Programmed in:</span><span>&nbsp; <b>C&#43;&#43;</b></span>
+          <br/>
+            <span>Source: <a href="https://github.com/Ondrej-Richtr/opengl-game-core">https://github.com/Ondrej-Richtr/opengl-game-core</a></span><br/>
+        </div>
+        <p class="post-description">Game core made using OpenGL, supposed to be first person target shooter.</p>
+    </header>
+      <div class="post-content">
+        <p>This is my &ldquo;learn OpenGL properly&rdquo; project. Plus I also wanted to have some open source C++ project to show off.
+Besides that the goal is to make first person shooter, where you practice your aim and reflexes by shooting appearing targets.</p>
+<p>I was surprised how nice OpenGL API actually is and how fun can writing shader be.
+In addition it was nice opportunity to learn a lot about lighting, materials, 3D models and such.</p>
+
+<h3 id="used-technology">
+  Used technology
+  <a href="#used-technology" class="hanchor" ariaLabel="Anchor"></a>
+</h3>
+<ul>
+<li><strong>OpenGL + GLSL</strong> – I started with version 3.0 and then switched to ES 2.0 because of planned support for WebGL.</li>
+<li><a href="https://www.glfw.org/"><strong>GLFW3</strong></a> – Well known library that I used for window and mouse/keyboard input managing.</li>
+<li><a href="https://github.com/Immediate-Mode-UI/Nuklear"><strong>Nuklear</strong></a> – Immediate mode UI library I want to use in this project, currently is used only experimentally.</li>
+</ul>
+<p>As mentioned, the project is programmed in C++. I&rsquo;m going for C++17 and I use modern C++ where I see fit (smart pointers, constexpr, std::move&hellip;). However the design of OpenGL API makes it typically unnecessary.
+Personally I still prefer Zig over C++ or C. Zig would help dramatically with a lot of annoyances like C++ constructors, compile time execution and build system.</p>
+
+<h3 id="screenshots---lighting-demo">
+  Screenshots - Lighting demo
+  <a href="#screenshots---lighting-demo" class="hanchor" ariaLabel="Anchor"></a>
+</h3>
+<p><a href="https://ondrej-richtr.github.io//target-2-crop.png"><img src="https://ondrej-richtr.github.io//target-2-crop.png" alt="target practice lighting demo - screenshot 2" width="100%"></a>
+<a href="https://ondrej-richtr.github.io//target-3-crop.png"><img src="https://ondrej-richtr.github.io//target-3-crop.png" alt="target practice lighting demo - screenshot 3" width="100%"></a></p>
+
+<h3 id="screenshots---target-shooting">
+  Screenshots - Target shooting
+  <a href="#screenshots---target-shooting" class="hanchor" ariaLabel="Anchor"></a>
+</h3>
+<a href="https://ondrej-richtr.github.io//target-1-crop.png"><img src="https://ondrej-richtr.github.io//target-1-crop.png" alt="target practice shooting demo - screenshot 1" width="100%"></a>
+<p>Further plans are obviously to finish the target shooting aspect of the game, include levels, moving targets and variety of other mechanics. Also maing Nuklear UI work properly and make the project run in the web.</p>
+
+      </div>
+
+
+    <footer class="post-footer">
+    </footer>
+  </article>
+        </main>
+        <footer class="site-footer">
+<p class="buildinfo">
+  <time datetime="2025-01-26 17:56:57 CET">Site built on: 2025-01-26 17:56:57 CET</time>
+  with <a href="https://gohugo.io">Hugo</a>, using <b>modified</b> theme <a href="https://manid2.github.io/hugo-xterm/">Hugo Xterm</a>.
+
+  
+</p>
+<div class="copyright">
+  <p></p>
+  
+</div>
+
+
+</footer>
+      </div>
+    </div><script type="text/javascript" src="/bundle.min.js"></script>
+</body>
+</html>

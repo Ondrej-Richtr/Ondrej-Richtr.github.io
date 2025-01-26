@@ -64,7 +64,9 @@ I also implemented my own version of collision mechanics. Even though the collis
   &lt;a href=&#34;#browser-version&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Play in your browser!&lt;/strong&gt;
-You can test the web version of the game &lt;a href=&#34;https://ondrej-richtr.github.io//games/raylib3d_project.html&#34;&gt;HERE.&lt;/a&gt; Requires WebAssembly and WebGL.&lt;/p&gt;
+You can test the web version of the game below, all you need to do is click onto the game&amp;rsquo;s frame. Requires WebAssembly and WebGL.&lt;/p&gt;
+&lt;iframe src=&#34;https://ondrej-richtr.github.io//games/raylib3d_project.html&#34; title=&#34;Raylib 3D game, web version&#34; width=640 height=360&gt;&lt;/iframe&gt; 
+&lt;p&gt;I also recommned trying it in &lt;a href=&#34;https://ondrej-richtr.github.io//games/raylib3d_project.html&#34;&gt;FULLSCREEN.&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The browser version is compiled using &lt;a href=&#34;https://emscripten.org/&#34;&gt;emscripten&lt;/a&gt; in combination with Zig build system. It works okayish, emscripten automatically sets fps equal to your device refresh rate (usually 60), so the game runs slower than usual. It also works on mobile devices, but I didn&amp;rsquo;t implement proper touch controls yet, so it isn&amp;rsquo;t really playable there.&lt;/p&gt;
 
 &lt;h3 id=&#34;download&#34;&gt;
@@ -97,11 +99,10 @@ Hold &lt;code&gt;Left Mouse&lt;/code&gt; to build a structure and adjust it&amp;
   Screenshots
   &lt;a href=&#34;#screenshots&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;Note: Screenshots are from older version.&lt;/em&gt;
-&lt;a href=&#34;https://ondrej-richtr.github.io//raylib3d-4-crop.PNG&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//raylib3d-4-crop.PNG&#34; alt=&#34;Raylib 3D game - screenshot 4&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;
-&lt;a href=&#34;https://ondrej-richtr.github.io//raylib3d-1-crop.PNG&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//raylib3d-1-crop.PNG&#34; alt=&#34;Raylib 3D game - screenshot 1&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;
-&lt;a href=&#34;https://ondrej-richtr.github.io//raylib3d-2-crop.PNG&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//raylib3d-2-crop.PNG&#34; alt=&#34;Raylib 3D game - screenshot 2&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;
-&lt;a href=&#34;https://ondrej-richtr.github.io//raylib3d-3.PNG&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//raylib3d-3.PNG&#34; alt=&#34;Raylib 3D game - screenshot 3&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ondrej-richtr.github.io//raylib3d-5.png&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//raylib3d-5.png&#34; alt=&#34;Raylib 3D game - screenshot 5&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://ondrej-richtr.github.io//raylib3d-7.png&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//raylib3d-7.png&#34; alt=&#34;Raylib 3D game - screenshot 7&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://ondrej-richtr.github.io//raylib3d-6.png&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//raylib3d-6.png&#34; alt=&#34;Raylib 3D game - screenshot 6&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://ondrej-richtr.github.io//raylib3d-8.png&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//raylib3d-8.png&#34; alt=&#34;Raylib 3D game - screenshot 8&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I had a break from this project because of my studies, but I returned to it and work on it whenever I can.
 Currently I&amp;rsquo;m working on proper player collision system and I also started to experiment with lighting.&lt;/p&gt;
 &lt;p&gt;The long term goal is probably going to be a FPS game with good movement/collision mechanics. I also want to implement my own 3D mesh handling as Raylib is pretty limiting in this regard &lt;em&gt;(maybe the real goal would be to remove Raylib altogether?)&lt;/em&gt;. Nicer in-game level editor would be great as well, but the existing one is usable too.&lt;/p&gt;
@@ -115,16 +116,32 @@ Currently I&amp;rsquo;m working on proper player collision system and I also sta
       <guid>https://ondrej-richtr.github.io/cv/</guid>
       <description>I&amp;rsquo;m 25 years old nerd from Czech Republic that found interest in programming, math, electronics, video games and several other technology related stuff. I&amp;rsquo;m quick learner and I enjoy creative activities especially. I like working in a team, however I prefer individual work.
 I currently reside in close proximity to Brno, Czech Republic.
-Experience Managry 2022 - 2024 Development of desktop and mobile application – Frontend/Backend. Oslavany, Czech Republic Development of UI in Flutter, animation system for company mascot and server in Dart.</description>
+Work experience TypeSoft 2025 Development of desktop and mobile applications – Frontend/Backend. Brno, Czech Republic Work on UI in Flutter, server in Dart and work with databases.</description>
       <content>&lt;p&gt;I&amp;rsquo;m 25 years old nerd from Czech Republic that found interest in programming, math, electronics, video games and several other technology related stuff.
 I&amp;rsquo;m quick learner and I enjoy creative activities especially.
 I like working in a team, however I prefer individual work.&lt;/p&gt;
 &lt;p&gt;I currently reside in close proximity to Brno, Czech Republic.&lt;/p&gt;
 
-&lt;h2 id=&#34;experience&#34;&gt;
-  Experience
-  &lt;a href=&#34;#experience&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;h2 id=&#34;work-experience&#34;&gt;
+  Work experience
+  &lt;a href=&#34;#work-experience&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
 &lt;/h2&gt;
+&lt;div class=&#34;cv-experience&#34;&gt;
+  &lt;div class=&#34;row lead&#34;&gt;
+    &lt;span&gt;TypeSoft&lt;/span&gt;
+    &lt;span&gt;2025&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&#34;row sub&#34;&gt;
+    &lt;span&gt;Development of desktop and mobile applications – Frontend/Backend.&lt;/span&gt;
+    &lt;span&gt;Brno, Czech Republic&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Work on UI in Flutter, server in Dart and work with databases.&lt;/li&gt;
+&lt;li&gt;Used technology: Flutter, Dart, Firebase, Git, Notion, Docker.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class=&#34;cv-experience&#34;&gt;
   &lt;div class=&#34;row lead&#34;&gt;
     &lt;span&gt;Managry&lt;/span&gt;
@@ -160,7 +177,7 @@ I like working in a team, however I prefer individual work.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Selected study concentration was in Mathematical Informatics.&lt;/li&gt;
-&lt;li&gt;Bachelor&amp;rsquo;s thesis: &lt;a href=&#34;https://ondrej-richtr.github.io/projects/vulkan-decode/&#34;&gt;Vulkan Video API based Video Decoding Acceleration&lt;/a&gt; (in Czech language).&lt;/li&gt;
+&lt;li&gt;Bachelor&amp;rsquo;s thesis (in Czech language): &lt;a href=&#34;https://ondrej-richtr.github.io/projects/vulkan-decode/&#34;&gt;Vulkan Video API based Video Decoding Acceleration&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;The study was completed &lt;strong&gt;successfully&lt;/strong&gt; 2024-06-24.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;cv-experience&#34;&gt;
@@ -202,6 +219,10 @@ I like working in a team, however I prefer individual work.&lt;/p&gt;
   &lt;a href=&#34;#languages&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;&lt;div style=&#34;display: flex;justify-content: space-between;width: 50%;&#34;&gt;
+    &lt;span style=&#34;margin-left: 15px;&#34;&gt;&lt;b&gt;Czech&lt;/b&gt;&lt;/span&gt;
+    &lt;span&gt;Native speaker&lt;/span&gt;
+&lt;/div&gt;
+&lt;div style=&#34;display: flex;justify-content: space-between;width: 50%;&#34;&gt;
     &lt;span style=&#34;margin-left: 15px;&#34;&gt;&lt;b&gt;English&lt;/b&gt;&lt;/span&gt;
     &lt;span&gt;B2 level&lt;/span&gt;
 &lt;/div&gt;
@@ -228,7 +249,7 @@ I like working in a team, however I prefer individual work.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div style=&#34;display: flex;justify-content: space-between;width: 50%;&#34;&gt;
     &lt;span style=&#34;margin-left: 15px;&#34;&gt;&lt;b&gt;Zig&lt;/b&gt;&lt;/span&gt;
-    &lt;span&gt;~1 years&lt;/span&gt;
+    &lt;span&gt;~2 years&lt;/span&gt;
 &lt;/div&gt;
 &lt;div style=&#34;display: flex;justify-content: space-between;width: 50%;&#34;&gt;
     &lt;span style=&#34;margin-left: 15px;&#34;&gt;&lt;b&gt;Dart&lt;/b&gt;&lt;/span&gt;
@@ -236,7 +257,7 @@ I like working in a team, however I prefer individual work.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div style=&#34;display: flex;justify-content: space-between;width: 50%;&#34;&gt;
     &lt;span style=&#34;margin-left: 15px;&#34;&gt;&lt;b&gt;Bash&lt;/b&gt;&lt;/span&gt;
-    &lt;span&gt;~3 years&lt;/span&gt;
+    &lt;span&gt;~2 years&lt;/span&gt;
 &lt;/div&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;other-skills&#34;&gt;
@@ -244,7 +265,8 @@ I like working in a team, however I prefer individual work.&lt;/p&gt;
   &lt;a href=&#34;#other-skills&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;Experience with Windows and Linux on user level.&lt;/li&gt;
+&lt;li&gt;Experience with OpenGL rendering pipeline, Vulkan video coding and GLSL.&lt;/li&gt;
+&lt;li&gt;Experience with Windows, Linux and macOS on user level.&lt;/li&gt;
 &lt;li&gt;Git, JIRA.&lt;/li&gt;
 &lt;li&gt;Driver&amp;rsquo;s license.&lt;/li&gt;
 &lt;/ul&gt;
@@ -289,6 +311,46 @@ realize that classic OOP is super bad for game programming. For drawing to scree
 &lt;a href=&#34;https://ondrej-richtr.github.io//sfml2-crop.PNG&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//sfml2-crop.PNG&#34; alt=&#34;SFML game - screenshot 2&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;
 &lt;a href=&#34;https://ondrej-richtr.github.io//sfml3-crop.PNG&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//sfml3-crop.PNG&#34; alt=&#34;SFML game - screenshot 3&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Currently this project is abandoned, it makes much more sense to start a new one instead. However I ended up using it as a basis and &amp;lsquo;GUI framework&amp;rsquo; for some of my other side things (e.g. static website generator for my gf).&lt;/p&gt;
+</content>
+    </item>
+    <item>
+      <title>Target practice game</title>
+      <link>https://ondrej-richtr.github.io/projects/target-practice/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+
+      <guid>https://ondrej-richtr.github.io/projects/target-practice/</guid>
+      <description>This is my &amp;ldquo;learn OpenGL properly&amp;rdquo; project. Plus I also wanted to have some open source C++ project to show off. Besides that the goal is to make first person shooter, where you practice your aim and reflexes by shooting appearing targets.
+I was surprised how nice OpenGL API actually is and how fun can writing shader be. In addition it was nice opportunity to learn a lot about lighting, materials, 3D models and such.</description>
+      <content>&lt;p&gt;This is my &amp;ldquo;learn OpenGL properly&amp;rdquo; project. Plus I also wanted to have some open source C++ project to show off.
+Besides that the goal is to make first person shooter, where you practice your aim and reflexes by shooting appearing targets.&lt;/p&gt;
+&lt;p&gt;I was surprised how nice OpenGL API actually is and how fun can writing shader be.
+In addition it was nice opportunity to learn a lot about lighting, materials, 3D models and such.&lt;/p&gt;
+
+&lt;h3 id=&#34;used-technology&#34;&gt;
+  Used technology
+  &lt;a href=&#34;#used-technology&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;OpenGL + GLSL&lt;/strong&gt; – I started with version 3.0 and then switched to ES 2.0 because of planned support for WebGL.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.glfw.org/&#34;&gt;&lt;strong&gt;GLFW3&lt;/strong&gt;&lt;/a&gt; – Well known library that I used for window and mouse/keyboard input managing.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Immediate-Mode-UI/Nuklear&#34;&gt;&lt;strong&gt;Nuklear&lt;/strong&gt;&lt;/a&gt; – Immediate mode UI library I want to use in this project, currently is used only experimentally.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As mentioned, the project is programmed in C++. I&amp;rsquo;m going for C++17 and I use modern C++ where I see fit (smart pointers, constexpr, std::move&amp;hellip;). However the design of OpenGL API makes it typically unnecessary.
+Personally I still prefer Zig over C++ or C. Zig would help dramatically with a lot of annoyances like C++ constructors, compile time execution and build system.&lt;/p&gt;
+
+&lt;h3 id=&#34;screenshots---lighting-demo&#34;&gt;
+  Screenshots - Lighting demo
+  &lt;a href=&#34;#screenshots---lighting-demo&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://ondrej-richtr.github.io//target-2-crop.png&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//target-2-crop.png&#34; alt=&#34;target practice lighting demo - screenshot 2&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://ondrej-richtr.github.io//target-3-crop.png&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//target-3-crop.png&#34; alt=&#34;target practice lighting demo - screenshot 3&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;screenshots---target-shooting&#34;&gt;
+  Screenshots - Target shooting
+  &lt;a href=&#34;#screenshots---target-shooting&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;a href=&#34;https://ondrej-richtr.github.io//target-1-crop.png&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//target-1-crop.png&#34; alt=&#34;target practice shooting demo - screenshot 1&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;
+&lt;p&gt;Further plans are obviously to finish the target shooting aspect of the game, include levels, moving targets and variety of other mechanics. Also maing Nuklear UI work properly and make the project run in the web.&lt;/p&gt;
 </content>
     </item>
     <item>
