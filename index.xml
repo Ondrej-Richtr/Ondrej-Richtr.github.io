@@ -331,9 +331,9 @@ In addition it was nice opportunity to learn a lot about lighting, materials, 3D
   &lt;a href=&#34;#used-technology&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;OpenGL + GLSL&lt;/strong&gt; – I started with version 3.0 and then switched to ES 2.0 because of planned support for WebGL.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OpenGL + GLSL&lt;/strong&gt; – I use OpenGL 3.3 for desktop builds and OpenGLES 2.0 for web build (and some older dekstops).&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.glfw.org/&#34;&gt;&lt;strong&gt;GLFW3&lt;/strong&gt;&lt;/a&gt; – Well known library that I used for window and mouse/keyboard input managing.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Immediate-Mode-UI/Nuklear&#34;&gt;&lt;strong&gt;Nuklear&lt;/strong&gt;&lt;/a&gt; – Immediate mode UI library I want to use in this project, currently is used only experimentally.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Immediate-Mode-UI/Nuklear&#34;&gt;&lt;strong&gt;Nuklear&lt;/strong&gt;&lt;/a&gt; – Immediate mode UI library I wanted to try out in this project.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;As mentioned, the project is programmed in C++. I&amp;rsquo;m going for C++17 and I use modern C++ where I see fit (smart pointers, constexpr, std::move&amp;hellip;). However the design of OpenGL API makes it typically unnecessary.
 Personally I still prefer Zig over C++ or C. Zig would help dramatically with a lot of annoyances like C++ constructors, compile time execution and build system.&lt;/p&gt;
@@ -349,8 +349,27 @@ Personally I still prefer Zig over C++ or C. Zig would help dramatically with a 
   Screenshots - Target shooting
   &lt;a href=&#34;#screenshots---target-shooting&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
 &lt;/h3&gt;
-&lt;a href=&#34;https://ondrej-richtr.github.io//target-1-crop.png&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//target-1-crop.png&#34; alt=&#34;target practice shooting demo - screenshot 1&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;
-&lt;p&gt;Further plans are obviously to finish the target shooting aspect of the game, include levels, moving targets and variety of other mechanics. Also maing Nuklear UI work properly and make the project run in the web.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ondrej-richtr.github.io//target-4-crop.png&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//target-4-crop.png&#34; alt=&#34;target practice shooting demo - screenshot 4&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://ondrej-richtr.github.io//target-5-crop.png&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//target-5-crop.png&#34; alt=&#34;target practice shooting demo - screenshot 5&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;shaders&#34;&gt;
+  Shaders
+  &lt;a href=&#34;#shaders&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Since I wanted this game to work on both desktop and in the browser, I&amp;rsquo;m using OpenGL 3.3 or OpenGLES 2.0 depending on the platform. However GLSL version 330 core isn&amp;rsquo;t really compatible with version 100, so you would need to write each shader in two versions and also keep them in sync. Yes, you can transpile between them, but in my experiments it didn&amp;rsquo;t really work out, since it was very limiting (for example macros got expanded prematurely).&lt;/p&gt;
+&lt;p&gt;So in the end I decided to make my own preprocessor/include system, which was pretty succesful and currently I only need to write each shader once. It esentially just includes some lines to the shader&amp;rsquo;s source code that differ based on the used OpenGL version. You also need to use specific macros in the shader source to do certain stuff:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;TEXTURE2D(myTextrue, pos)&lt;/code&gt; instead of &lt;code&gt;texture(myTexture, pos)&lt;/code&gt;/&lt;code&gt;texture2D(myTexture, pos)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;or &lt;code&gt;OUTPUT(outputColor)&lt;/code&gt; to output a color from fragment shader&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;IN_ATTR&lt;/code&gt; for input attribute definitions and &lt;code&gt;OUT_ATTR&lt;/code&gt; for output one.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It also allows me to append arbitrary pieces of code to shaders, which is useful for including extra functionality into them based on some logic in the C++ code.&lt;/p&gt;
+
+&lt;h3 id=&#34;further-plans&#34;&gt;
+  Further plans
+  &lt;a href=&#34;#further-plans&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Further plans are obviously to finish the target shooting aspect of the game, include levels, moving targets and variety of other mechanics. Also I want the game to work on the web properly, currently it builds and runs successfully, but the rendering is broken.&lt;/p&gt;
 </content>
     </item>
     <item>

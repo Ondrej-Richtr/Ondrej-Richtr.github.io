@@ -95,9 +95,9 @@ In addition it was nice opportunity to learn a lot about lighting, materials, 3D
   <a href="#used-technology" class="hanchor" ariaLabel="Anchor"></a>
 </h3>
 <ul>
-<li><strong>OpenGL + GLSL</strong> – I started with version 3.0 and then switched to ES 2.0 because of planned support for WebGL.</li>
+<li><strong>OpenGL + GLSL</strong> – I use OpenGL 3.3 for desktop builds and OpenGLES 2.0 for web build (and some older dekstops).</li>
 <li><a href="https://www.glfw.org/"><strong>GLFW3</strong></a> – Well known library that I used for window and mouse/keyboard input managing.</li>
-<li><a href="https://github.com/Immediate-Mode-UI/Nuklear"><strong>Nuklear</strong></a> – Immediate mode UI library I want to use in this project, currently is used only experimentally.</li>
+<li><a href="https://github.com/Immediate-Mode-UI/Nuklear"><strong>Nuklear</strong></a> – Immediate mode UI library I wanted to try out in this project.</li>
 </ul>
 <p>As mentioned, the project is programmed in C++. I&rsquo;m going for C++17 and I use modern C++ where I see fit (smart pointers, constexpr, std::move&hellip;). However the design of OpenGL API makes it typically unnecessary.
 Personally I still prefer Zig over C++ or C. Zig would help dramatically with a lot of annoyances like C++ constructors, compile time execution and build system.</p>
@@ -113,8 +113,27 @@ Personally I still prefer Zig over C++ or C. Zig would help dramatically with a 
   Screenshots - Target shooting
   <a href="#screenshots---target-shooting" class="hanchor" ariaLabel="Anchor"></a>
 </h3>
-<a href="https://ondrej-richtr.github.io//target-1-crop.png"><img src="https://ondrej-richtr.github.io//target-1-crop.png" alt="target practice shooting demo - screenshot 1" width="100%"></a>
-<p>Further plans are obviously to finish the target shooting aspect of the game, include levels, moving targets and variety of other mechanics. Also maing Nuklear UI work properly and make the project run in the web.</p>
+<p><a href="https://ondrej-richtr.github.io//target-4-crop.png"><img src="https://ondrej-richtr.github.io//target-4-crop.png" alt="target practice shooting demo - screenshot 4" width="100%"></a>
+<a href="https://ondrej-richtr.github.io//target-5-crop.png"><img src="https://ondrej-richtr.github.io//target-5-crop.png" alt="target practice shooting demo - screenshot 5" width="100%"></a></p>
+
+<h3 id="shaders">
+  Shaders
+  <a href="#shaders" class="hanchor" ariaLabel="Anchor"></a>
+</h3>
+<p>Since I wanted this game to work on both desktop and in the browser, I&rsquo;m using OpenGL 3.3 or OpenGLES 2.0 depending on the platform. However GLSL version 330 core isn&rsquo;t really compatible with version 100, so you would need to write each shader in two versions and also keep them in sync. Yes, you can transpile between them, but in my experiments it didn&rsquo;t really work out, since it was very limiting (for example macros got expanded prematurely).</p>
+<p>So in the end I decided to make my own preprocessor/include system, which was pretty succesful and currently I only need to write each shader once. It esentially just includes some lines to the shader&rsquo;s source code that differ based on the used OpenGL version. You also need to use specific macros in the shader source to do certain stuff:</p>
+<ul>
+<li><code>TEXTURE2D(myTextrue, pos)</code> instead of <code>texture(myTexture, pos)</code>/<code>texture2D(myTexture, pos)</code></li>
+<li>or <code>OUTPUT(outputColor)</code> to output a color from fragment shader</li>
+<li><code>IN_ATTR</code> for input attribute definitions and <code>OUT_ATTR</code> for output one.</li>
+</ul>
+<p>It also allows me to append arbitrary pieces of code to shaders, which is useful for including extra functionality into them based on some logic in the C++ code.</p>
+
+<h3 id="further-plans">
+  Further plans
+  <a href="#further-plans" class="hanchor" ariaLabel="Anchor"></a>
+</h3>
+<p>Further plans are obviously to finish the target shooting aspect of the game, include levels, moving targets and variety of other mechanics. Also I want the game to work on the web properly, currently it builds and runs successfully, but the rendering is broken.</p>
 
       </div>
 
@@ -125,7 +144,7 @@ Personally I still prefer Zig over C++ or C. Zig would help dramatically with a 
         </main>
         <footer class="site-footer">
 <p class="buildinfo">
-  <time datetime="2025-01-26 17:56:57 CET">Site built on: 2025-01-26 17:56:57 CET</time>
+  <time datetime="2025-03-27 18:36:18 CET">Site built on: 2025-03-27 18:36:18 CET</time>
   with <a href="https://gohugo.io">Hugo</a>, using <b>modified</b> theme <a href="https://manid2.github.io/hugo-xterm/">Hugo Xterm</a>.
 
   
