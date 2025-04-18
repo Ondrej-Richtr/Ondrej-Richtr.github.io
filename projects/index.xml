@@ -8,65 +8,30 @@
       <language>en</language>
       <lastBuildDate>Tue, 09 Jul 2024 18:07:34 +0200</lastBuildDate><atom:link href="https://ondrej-richtr.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>2.5D Side-scroller Game</title>
-      <link>https://ondrej-richtr.github.io/projects/raylib-side-scroller/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-
-      <guid>https://ondrej-richtr.github.io/projects/raylib-side-scroller/</guid>
-      <description>Just a simple side-scrolling game test. I wanted to try out Zig, which is a new modern programing language that I think is pretty nice for games, in combination with Raylib.
-During the short development of this project I realized that movement collisions are much easier if the player is able to move only on a grid. Also that drawing arbitrary 2.5D is not as easy as I thought, you can&amp;rsquo;t just layer sprites on top of eachother.</description>
-      <content>&lt;p&gt;Just a simple side-scrolling game test. I wanted to try out Zig, which is a new modern programing language that I think is pretty nice for games, in combination with &lt;a href=&#34;https://www.raylib.com/&#34;&gt;Raylib&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;During the short development of this project I realized that movement collisions are much easier if the player is able to move only on a grid.
-Also that drawing arbitrary 2.5D is not as easy as I thought, you can&amp;rsquo;t just layer sprites on top of eachother.&lt;/p&gt;
-
-&lt;h3 id=&#34;download&#34;&gt;
-  Download
-  &lt;a href=&#34;#download&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
-&lt;/h3&gt;
-&lt;p&gt;You can download portable version for &lt;a href=&#34;https://ondrej-richtr.github.io//raylib-2d-v1.zip&#34;&gt;Windows x86_64 here (ZIP).&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: Should work on Linux too when executed through &lt;a href=&#34;https://www.winehq.org/&#34;&gt;Wine&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;controls&#34;&gt;
-  Controls
-  &lt;a href=&#34;#controls&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
-&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Arrows&lt;/code&gt; to move.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Space&lt;/code&gt; to jump.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Shift&lt;/code&gt; to attack the dummy.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Esc&lt;/code&gt; to exit the game.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;screenshots&#34;&gt;
-  Screenshots
-  &lt;a href=&#34;#screenshots&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
-&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://ondrej-richtr.github.io//raylib2d-1-crop.PNG&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//raylib2d-1-crop.PNG&#34; alt=&#34;Raylib side-scroller - screenshot 1&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;
-&lt;a href=&#34;https://ondrej-richtr.github.io//raylib2d-2-crop.PNG&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//raylib2d-2-crop.PNG&#34; alt=&#34;Raylib side-scroller - screenshot 2&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;I might work from this project if I ever decide to truly make a 2D game.&lt;/p&gt;
-</content>
-    </item>
-    <item>
       <title>3D Game using Raylib</title>
       <link>https://ondrej-richtr.github.io/projects/raylib-3d/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 
       <guid>https://ondrej-richtr.github.io/projects/raylib-3d/</guid>
-      <description>My first attempt at a 3D game. I used simple game programming library Raylib for rendering and I/O. Project is (again) entirely in Zig, seems like a good combination with Raylib.
-The &amp;ldquo;game&amp;rdquo; is mainly just a playground of stuff I was testing out. You can build, delete or edit simple structures, and there is a short obstacle course that you can try to jump trough - but it proved to be quite a challenge for some people.</description>
+      <description>My first attempt at a 3D game. I used simple game programming library Raylib for rendering and I/O. Project is written entirely in Zig, seems like a good combination with Raylib (which is written in C).
+The game is mainly just a playground of stuff I was testing out. You can build, delete or edit simple structures, and there is a short obstacle course that you can try to jump trough - but it proved to be quite a challenge for some people.</description>
       <content>&lt;p&gt;My first attempt at a 3D game. I used simple game programming library &lt;a href=&#34;https://www.raylib.com/&#34;&gt;Raylib&lt;/a&gt; for rendering and I/O.
-Project is (again) entirely in Zig, seems like a good combination with Raylib.&lt;/p&gt;
-&lt;p&gt;The &amp;ldquo;game&amp;rdquo; is mainly just a playground of stuff I was testing out. You can build, delete or edit simple structures, and there is a short obstacle course that you can try to jump trough - but it proved to be quite a challenge for some people.
-I also implemented my own version of collision mechanics. Even though the collision system is simple it still works nicely even with moving platforms and such.&lt;/p&gt;
+Project is written entirely in Zig, seems like a good combination with Raylib (which is written in C).&lt;/p&gt;
+&lt;p&gt;The game is mainly just a playground of stuff I was testing out. You can build, delete or edit simple structures, and there is a short obstacle course that you can try to jump trough - but it proved to be quite a challenge for some people.&lt;/p&gt;
+&lt;p&gt;The most interesting achievment I made in this project was the implementation of my custom collision + physics system. It allows for &lt;em&gt;player-environment&lt;/em&gt;, &lt;em&gt;environment-player&lt;/em&gt; interactions.
+The implementation is completely my own and is based on the idea of &lt;a href=&#34;https://en.wikipedia.org/wiki/Minkowski_addition&#34;&gt;Minkowski sum&lt;/a&gt;, however I actually use just an aproximation of the sum, as that makes the system simpler and in some cases even more intuitive for the player.
+The player is represented by multiple spheres, which thanks to the aforementioned aproximation basically makes it a cylinder shape, environment is represented by boxes (&lt;em&gt;parallelograms&lt;/em&gt; to be precise, they can be sloped).
+Functionality includes: player movement with &lt;em&gt;sliding&lt;/em&gt;(!) and gravity, requesting which objects are touching given entity (used for determining whether the player is standing on the ground or is in the air), moving non-player entities that can collide and push the player if possible, programmer can also set if the player will stick to the given entity or not (aka &lt;em&gt;riding&lt;/em&gt; mechanic used for elevators and moving platforms), there are of course standard body intersection functions too.&lt;/p&gt;
 
 &lt;h3 id=&#34;browser-version&#34;&gt;
   Browser version
   &lt;a href=&#34;#browser-version&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Play in your browser!&lt;/strong&gt;
-You can test the web version of the game below, all you need to do is click onto the game&amp;rsquo;s frame. Requires WebAssembly and WebGL.&lt;/p&gt;
-&lt;iframe src=&#34;https://ondrej-richtr.github.io//games/raylib3d_project.html&#34; title=&#34;Raylib 3D game, web version&#34; width=640 height=360&gt;&lt;/iframe&gt; 
-&lt;p&gt;I also recommned trying it in &lt;a href=&#34;https://ondrej-richtr.github.io//games/raylib3d_project.html&#34;&gt;FULLSCREEN.&lt;/a&gt;&lt;/p&gt;
+You can test the web version of the game below, requires WebAssembly and WebGL.&lt;/p&gt;
+&lt;a href=&#34;https://ondrej-richtr.github.io//games/raylib3d_project.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;
+&lt;img src=&#34;https://ondrej-richtr.github.io//raylib3d-play.jfif&#34; alt=&#34;Raylib 3D game, web version&#34; width=&#34;100%&#34;&gt;
+&lt;/a&gt;
 &lt;p&gt;The browser version is compiled using &lt;a href=&#34;https://emscripten.org/&#34;&gt;emscripten&lt;/a&gt; in combination with Zig build system. It works okayish, emscripten automatically sets fps equal to your device refresh rate (usually 60), so the game runs slower than usual. It also works on mobile devices, but I didn&amp;rsquo;t implement proper touch controls yet, so it isn&amp;rsquo;t really playable there.&lt;/p&gt;
 
 &lt;h3 id=&#34;download&#34;&gt;
@@ -103,9 +68,7 @@ Hold &lt;code&gt;Left Mouse&lt;/code&gt; to build a structure and adjust it&amp;
 &lt;a href=&#34;https://ondrej-richtr.github.io//raylib3d-7.png&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//raylib3d-7.png&#34; alt=&#34;Raylib 3D game - screenshot 7&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;
 &lt;a href=&#34;https://ondrej-richtr.github.io//raylib3d-6.png&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//raylib3d-6.png&#34; alt=&#34;Raylib 3D game - screenshot 6&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;
 &lt;a href=&#34;https://ondrej-richtr.github.io//raylib3d-8.png&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//raylib3d-8.png&#34; alt=&#34;Raylib 3D game - screenshot 8&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;I had a break from this project because of my studies, but I returned to it and work on it whenever I can.
-Currently I&amp;rsquo;m working on proper player collision system and I also started to experiment with lighting.&lt;/p&gt;
-&lt;p&gt;The long term goal is probably going to be a FPS game with good movement/collision mechanics. I also want to implement my own 3D mesh handling as Raylib is pretty limiting in this regard &lt;em&gt;(maybe the real goal would be to remove Raylib altogether?)&lt;/em&gt;. Nicer in-game level editor would be great as well, but the existing one is usable too.&lt;/p&gt;
+&lt;p&gt;Since I more enjoy programming my own rendering backends (see my &lt;a href=&#34;https://ondrej-richtr.github.io/projects/target-practice/&#34;&gt;Target shooting project&lt;/a&gt;) I don&amp;rsquo;t actively work on this project anymore. Otherwise the goal would be to improve the physics and in-game editor to the point that this project could be used as a simple FPS/Platformer game engine.&lt;/p&gt;
 </content>
     </item>
     <item>
@@ -118,7 +81,7 @@ Currently I&amp;rsquo;m working on proper player collision system and I also sta
       <content>&lt;p&gt;My first bigger project I made. It was supposed to be a visual novel type of game, but in the end I ended up spending majority of time creating it&amp;rsquo;s user interface. I used C++, but in the end it was more of a C with classes and templates, one of the crucial experiences to
 realize that classic OOP is super bad for game programming. For drawing to screen and I/O C++ multi-media library &lt;a href=&#34;https://www.sfml-dev.org/&#34;&gt;SFML&lt;/a&gt; was used.&lt;/p&gt;
 &lt;p&gt;The whole entirety of user interface is programmed from scratch, that includes Text buttons, Sprite buttons, Sliders, Progress bars, Checkboxes, Multiline textboxes (also with slow-print effect) and numerouse Editboxes for text. The &amp;ldquo;game tree&amp;rdquo; of the game&amp;rsquo;s story is not hardcoded in, instead it is read at the startup from provided pseudo-XML text files (e.g. dialogs.txt). That means you can edit the story without need to recompile. There was also working system for saving/loading games, but there&amp;rsquo;s no proper UI implemented for it.&lt;/p&gt;
-&lt;p&gt;Works on Windows and Linux, but I ran into issues when trying to build portable binary for Windows, that&amp;rsquo;s why there&amp;rsquo;s no download. I also decided not to make source available, since it&amp;rsquo;s one of my oldest projects and thus the code quality is terrible.&lt;/p&gt;
+&lt;p&gt;Works on Windows and Linux, but I ran into issues when trying to build portable binary for Windows, that&amp;rsquo;s why there&amp;rsquo;s no download. I also decided not to make source available, since it&amp;rsquo;s one of my oldest projects and thus the code quality is not the best.&lt;/p&gt;
 
 &lt;h3 id=&#34;video-demo&#34;&gt;
   Video Demo
@@ -136,7 +99,7 @@ realize that classic OOP is super bad for game programming. For drawing to scree
 &lt;p&gt;&lt;a href=&#34;https://ondrej-richtr.github.io//sfml1-crop.PNG&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//sfml1-crop.PNG&#34; alt=&#34;SFML game - screenshot 1&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;
 &lt;a href=&#34;https://ondrej-richtr.github.io//sfml2-crop.PNG&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//sfml2-crop.PNG&#34; alt=&#34;SFML game - screenshot 2&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;
 &lt;a href=&#34;https://ondrej-richtr.github.io//sfml3-crop.PNG&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//sfml3-crop.PNG&#34; alt=&#34;SFML game - screenshot 3&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Currently this project is abandoned, it makes much more sense to start a new one instead. However I ended up using it as a basis and &amp;lsquo;GUI framework&amp;rsquo; for some of my other side things (e.g. static website generator for my gf).&lt;/p&gt;
+&lt;p&gt;Currently this project is abandoned, it makes much more sense to start a new one instead. However I ended up using it as a basis and &amp;lsquo;GUI framework&amp;rsquo; for some of my other side endeavors (e.g. static website generator for my gf).&lt;/p&gt;
 </content>
     </item>
     <item>
@@ -145,12 +108,15 @@ realize that classic OOP is super bad for game programming. For drawing to scree
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 
       <guid>https://ondrej-richtr.github.io/projects/target-practice/</guid>
-      <description>This is my &amp;ldquo;learn OpenGL properly&amp;rdquo; project. Plus I also wanted to have some open source C++ project to show off. Besides that the goal is to make first person shooter, where you practice your aim and reflexes by shooting appearing targets.
+      <description>This is my &amp;ldquo;learn OpenGL properly&amp;rdquo; project. Plus I also wanted to have some open source C++ project to show off. Besides that the goal is to make first-person shooter, where you practice your aim and reflexes by shooting appearing targets.
 I was surprised how nice OpenGL API actually is and how fun can writing shader be. In addition it was nice opportunity to learn a lot about lighting, materials, 3D models and such.</description>
       <content>&lt;p&gt;This is my &amp;ldquo;learn OpenGL properly&amp;rdquo; project. Plus I also wanted to have some open source C++ project to show off.
-Besides that the goal is to make first person shooter, where you practice your aim and reflexes by shooting appearing targets.&lt;/p&gt;
+Besides that the goal is to make first-person shooter, where you practice your aim and reflexes by shooting appearing targets.&lt;/p&gt;
 &lt;p&gt;I was surprised how nice OpenGL API actually is and how fun can writing shader be.
-In addition it was nice opportunity to learn a lot about lighting, materials, 3D models and such.&lt;/p&gt;
+In addition it was nice opportunity to learn a lot about lighting, materials, 3D models and such.
+For texture loading I use &lt;a href=&#34;https://github.com/nothings/stb&#34;&gt;stb-image.h&lt;/a&gt;, for &lt;code&gt;.obj&lt;/code&gt; 3D model loading I use &lt;a href=&#34;https://github.com/syoyo/tinyobjloader-c&#34;&gt;tinyobjloader-c&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The real challenge was to make the rendering engine work with each of OpenGL 3.3, OpenGLES 2.0 and WebGL.
+The only setback at this moment is that stencil buffers are not working with OpenGLES 2.0 on some GPUs&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;web-demo&#34;&gt;
   Web Demo
@@ -159,6 +125,7 @@ In addition it was nice opportunity to learn a lot about lighting, materials, 3D
 &lt;a href=&#34;https://ondrej-richtr.github.io//games/shooting_practice.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;
 &lt;img src=&#34;https://ondrej-richtr.github.io//target-play.jfif&#34; alt=&#34;Target practice game demo&#34; width=&#34;100%&#34;&gt;
 &lt;/a&gt;
+&lt;p&gt;This browser version is compiled using &lt;a href=&#34;https://emscripten.org/&#34;&gt;emscripten&lt;/a&gt;. Since I anticipated this from the beginning it was pretty easy to make it work. Mouse movement sometimes glitches a bit in some browsers, I suspect it&amp;rsquo;s a cursor locking issue caused by GLFW.&lt;/p&gt;
 
 &lt;h3 id=&#34;used-technology&#34;&gt;
   Used technology
@@ -167,7 +134,7 @@ In addition it was nice opportunity to learn a lot about lighting, materials, 3D
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;OpenGL + GLSL&lt;/strong&gt; – I use OpenGL 3.3 for desktop builds and OpenGLES 2.0/WebGL1 for web build (and some older dekstops).&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.glfw.org/&#34;&gt;&lt;strong&gt;GLFW3&lt;/strong&gt;&lt;/a&gt; – Well known library that I used for window and mouse/keyboard input managing.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Immediate-Mode-UI/Nuklear&#34;&gt;&lt;strong&gt;Nuklear&lt;/strong&gt;&lt;/a&gt; – Immediate mode UI library I wanted to try out in this project.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Immediate-Mode-UI/Nuklear&#34;&gt;&lt;strong&gt;Nuklear&lt;/strong&gt;&lt;/a&gt; – Immediate mode UI library that I wanted to try out.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;As mentioned, the project is programmed in C++. I&amp;rsquo;m going for C++17 and I use modern C++ where I see fit (smart pointers, constexpr, std::move&amp;hellip;). However the design of OpenGL API makes it typically unnecessary.
 Personally I still prefer Zig over C++ or C. Zig would help dramatically with a lot of annoyances like C++ constructors, compile time execution and build system.&lt;/p&gt;
@@ -190,12 +157,12 @@ Personally I still prefer Zig over C++ or C. Zig would help dramatically with a 
   Shaders
   &lt;a href=&#34;#shaders&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;Since I wanted this game to work on both desktop and in the browser, I&amp;rsquo;m using OpenGL 3.3 or OpenGLES 2.0 depending on the platform. However GLSL version 330 core isn&amp;rsquo;t really compatible with version 100, so you would need to write each shader in two versions and also keep them in sync. Yes, you can transpile between them, but in my experiments it didn&amp;rsquo;t really work out, since it was very limiting (for example macros got expanded prematurely).&lt;/p&gt;
+&lt;p&gt;Since I wanted this game to work on both desktop and in the browser, I&amp;rsquo;m using OpenGL 3.3 or OpenGLES 2.0 or WebGL1 depending on the platform. However GLSL version 330 core isn&amp;rsquo;t really compatible with version 100, so you would need to write each shader in two versions and also keep them in sync. Yes, you can transpile between them, but in my experiments it didn&amp;rsquo;t really work out, since it was very limiting (for example macros got expanded prematurely).&lt;/p&gt;
 &lt;p&gt;So in the end I decided to make my own preprocessor/include system, which was pretty succesful and currently I only need to write each shader once. It esentially just includes some lines to the shader&amp;rsquo;s source code that differ based on the used OpenGL version. You also need to use specific macros in the shader source to do certain stuff:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;TEXTURE2D(myTextrue, pos)&lt;/code&gt; instead of &lt;code&gt;texture(myTexture, pos)&lt;/code&gt;/&lt;code&gt;texture2D(myTexture, pos)&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;or &lt;code&gt;OUTPUT(outputColor)&lt;/code&gt; to output a color from fragment shader&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;IN_ATTR&lt;/code&gt; for input attribute definitions and &lt;code&gt;OUT_ATTR&lt;/code&gt; for output one.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;IN_ATTR&lt;/code&gt; for input attribute definitions and &lt;code&gt;OUT_ATTR&lt;/code&gt; for output ones.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;It also allows me to append arbitrary pieces of code to shaders, which is useful for including extra functionality into them based on some logic in the C++ code.&lt;/p&gt;
 
@@ -204,6 +171,14 @@ Personally I still prefer Zig over C++ or C. Zig would help dramatically with a 
   &lt;a href=&#34;#further-plans&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
 &lt;/h3&gt;
 &lt;p&gt;Further plans are obviously to finish the target shooting aspect of the game, include levels, moving targets and variety of other mechanics. Also I want the game to work on the web properly, improve the bare-bones html shell and fix cursor locking.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;Works on Intel, but not on NVIDIA. Probably caused by drivers forcing combined depth-stencil renderbuffers, however those are sadly not possible with OpenGLES 2.0 :(&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 </content>
     </item>
     <item>
@@ -212,11 +187,13 @@ Personally I still prefer Zig over C++ or C. Zig would help dramatically with a 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 
       <guid>https://ondrej-richtr.github.io/projects/todolist/</guid>
-      <description>Simple program written in C for keeping notes, deadlines and TO-DO task. I attempted to make it as much &amp;ldquo;unix-like&amp;rdquo; as possible. You can use it only through command line, but both interactive and non-interactive modes are available. UTF-8 is built in, but it can cause problems in terminals without UTF-8 support (mainly on Windows).
-Should work on all major platforms. All you need to build it is a C compiler, I used gcc.</description>
-      <content>&lt;p&gt;Simple program written in C for keeping notes, deadlines and TO-DO task. I attempted to make it as much &amp;ldquo;unix-like&amp;rdquo; as possible.
-You can use it only through command line, but both interactive and non-interactive modes are available. UTF-8 is built in, but it can cause problems in terminals without UTF-8 support (mainly on Windows).&lt;/p&gt;
-&lt;p&gt;Should work on all major platforms. All you need to build it is a C compiler, I used &lt;code&gt;gcc&lt;/code&gt;.&lt;/p&gt;
+      <description>Simple program written in C for keeping notes, deadlines and TO-DO tasks. I attempted to make it as much &amp;ldquo;unix-like&amp;rdquo; as possible. You can use it only through command line, but both interactive and non-interactive modes are available. UTF-8 is built in, but non-ASCII characters might cause problems in terminals without UTF-8 support (mainly on Windows).
+It implements all basic note manipulation commands like: print, add, delete, mark done/undone, change. But few non-trivial ones are also included, namely: sort done/undone/deadline/text/age, clear all/done/undone, move.</description>
+      <content>&lt;p&gt;Simple program written in C for keeping notes, deadlines and TO-DO tasks. I attempted to make it as much &amp;ldquo;unix-like&amp;rdquo; as possible.
+You can use it only through command line, but both interactive and non-interactive modes are available.
+UTF-8 is built in, but non-ASCII characters might cause problems in terminals without UTF-8 support (mainly on Windows).&lt;/p&gt;
+&lt;p&gt;It implements all basic note manipulation commands like: &lt;code&gt;print&lt;/code&gt;, &lt;code&gt;add&lt;/code&gt;, &lt;code&gt;delete&lt;/code&gt;, &lt;code&gt;mark done/undone&lt;/code&gt;, &lt;code&gt;change&lt;/code&gt;. But few non-trivial ones are also included, namely: &lt;code&gt;sort done/undone/deadline/text/age&lt;/code&gt;, &lt;code&gt;clear all/done/undone&lt;/code&gt;, &lt;code&gt;move&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Should work on all major platforms, all you need is a C compiler, I used &lt;code&gt;gcc&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;screenshots---interactive-mode&#34;&gt;
   Screenshots - Interactive mode
@@ -231,7 +208,7 @@ You can use it only through command line, but both interactive and non-interacti
 &lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://ondrej-richtr.github.io//todo3-crop.PNG&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//todo3-crop.PNG&#34; alt=&#34;todo non-interactive mode - screenshot 1&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;
 &lt;a href=&#34;https://ondrej-richtr.github.io//todo4-crop.PNG&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//todo4-crop.PNG&#34; alt=&#34;todo non-interactive mode - screenshot 2&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Currently the development on this project is stopped. I wanted to do one more release, but since it&amp;rsquo;s perfectly usable (for me) as is, I decided not to continue with it for now. However this little program proved useful, especially for keeping dates of deadlines during my studies.&lt;/p&gt;
+&lt;p&gt;Currently the development on this project is stopped. I wanted to do one more release, but since it&amp;rsquo;s perfectly usable (for me at least) as is, I decided not to continue with it for now. However this little program proved useful, especially for keeping dates of deadlines during my studies.&lt;/p&gt;
 </content>
     </item>
     <item>
@@ -240,9 +217,9 @@ You can use it only through command line, but both interactive and non-interacti
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 
       <guid>https://ondrej-richtr.github.io/projects/vulkan-decode/</guid>
-      <description>A H.264 decoder I made as my bachelor&amp;rsquo;s thesis (text is in Czech, link is HERE). &amp;lsquo;vulkan_decode&amp;rsquo; is structured as a module for UltraGrid (software tool for low latency and high-quality video network transmissions). It&amp;rsquo;s using Vulkan Video API for hardware accelerated decoding. Module is programmed in C, same as majority of UltraGrid.
+      <description>A H.264 decoder I made as my bachelor&amp;rsquo;s thesis (text is in Czech, link is HERE). &amp;lsquo;vulkan_decode&amp;rsquo; is structured as a module for UltraGrid - software tool for low latency and high-quality video network transmissions. It&amp;rsquo;s using Vulkan Video API for hardware accelerated decoding. Module is programmed in C, same as majority of UltraGrid.
 This project (thesis) was pretty hardcore sice I only had half a year to program the module and write the text.</description>
-      <content>&lt;p&gt;A H.264 decoder I made as my bachelor&amp;rsquo;s thesis (text is in Czech, link is &lt;a href=&#34;https://is.muni.cz/th/s0c33/&#34;&gt;HERE&lt;/a&gt;). &amp;lsquo;vulkan_decode&amp;rsquo; is structured as a module for &lt;a href=&#34;https://www.ultragrid.cz&#34;&gt;UltraGrid&lt;/a&gt; (software tool for low latency and high-quality video network transmissions). It&amp;rsquo;s using &lt;a href=&#34;https://www.khronos.org/blog/khronos-finalizes-vulkan-video-extensions-for-accelerated-h.264-and-h.265-decode&#34;&gt;Vulkan Video API&lt;/a&gt; for hardware accelerated decoding. Module is programmed in C, same as majority of UltraGrid.&lt;/p&gt;
+      <content>&lt;p&gt;A H.264 decoder I made as my bachelor&amp;rsquo;s thesis (text is in Czech, link is &lt;a href=&#34;https://is.muni.cz/th/s0c33/&#34;&gt;HERE&lt;/a&gt;). &amp;lsquo;vulkan_decode&amp;rsquo; is structured as a module for &lt;a href=&#34;https://www.ultragrid.cz&#34;&gt;UltraGrid&lt;/a&gt; - software tool for low latency and high-quality video network transmissions. It&amp;rsquo;s using &lt;a href=&#34;https://www.khronos.org/blog/khronos-finalizes-vulkan-video-extensions-for-accelerated-h.264-and-h.265-decode&#34;&gt;Vulkan Video API&lt;/a&gt; for hardware accelerated decoding. Module is programmed in C, same as majority of UltraGrid.&lt;/p&gt;
 &lt;p&gt;This project (thesis) was pretty hardcore sice I only had half a year to program the module and write the text. I also had no knowledge about video coding, H.264 coding format, UltraGrid, Vulkan or Vulkan Video beforehand.
 To not make it too easy, Vulkan actually wants you to parse majority of H.264 bitstream data yourself and also wants you to manually manage reference frames.
 Output frames are in NV12 format, which is not supported in UltraGrid, so the module needs to manually convert them to I420&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.
@@ -270,7 +247,7 @@ But in the end it all works, even though there are few limitations mentioned bel
     Demo video of the SFML game, however your browser does not support the video tag.
 &lt;/video&gt;
 &lt;p&gt;This module really needs hardware accelerated conversion of formats, which would dramatically boost it&amp;rsquo;s performance and allow it to decode high-res and/or high-framerate video streams. Since I had only like 4 days left to write the whole text of the thesis, I decided to skip this important optimization.&lt;/p&gt;
-&lt;p&gt;Not sure if I will ever work on this again. Maybe if I would get contacted by UltraGrid devs or something like that.&lt;/p&gt;
+&lt;p&gt;Not sure if I will ever work on this again. Maybe if I would get contacted by the UltraGrid development team.&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;

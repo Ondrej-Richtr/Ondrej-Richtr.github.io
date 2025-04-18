@@ -4,13 +4,13 @@
 <title>3D Game using Raylib :: Ondřej Richtr - portfolio</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="A 3D game made using Raylib with simple movement and collision mechanics." />
+<meta name="description" content="A 3D game made using Raylib with custom collision mechanics and physics." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://ondrej-richtr.github.io/projects/raylib-3d/" />
 <meta property="og:locale" content="en" />
 <meta property="og:title" content="3D Game using Raylib :: Ondřej Richtr - portfolio" />
-<meta property="og:description" content="A 3D game made using Raylib with simple movement and collision mechanics." />
+<meta property="og:description" content="A 3D game made using Raylib with custom collision mechanics and physics." />
   <meta property="og:type" content="article" />
   <meta property="article:author" content="Ondřej Richtr - portfolio" />
 <meta property="og:url" content="https://ondrej-richtr.github.io/projects/raylib-3d/" />
@@ -77,26 +77,30 @@
         <h1 class="post-title"><a href="https://ondrej-richtr.github.io/projects/raylib-3d/">3D Game using Raylib</a></h1>
         <div class="post-meta">
           
-            <span>Year: 2023,</span>
+            <span>Started in: 2023,</span>
             <span>Programmed in:</span><span>&nbsp; <b>Zig</b></span>
           <br/>
         </div>
-        <p class="post-description">A 3D game made using Raylib with simple movement and collision mechanics.</p>
+        <p class="post-description">A 3D game made using Raylib with custom collision mechanics and physics.</p>
     </header>
       <div class="post-content">
         <p>My first attempt at a 3D game. I used simple game programming library <a href="https://www.raylib.com/">Raylib</a> for rendering and I/O.
-Project is (again) entirely in Zig, seems like a good combination with Raylib.</p>
-<p>The &ldquo;game&rdquo; is mainly just a playground of stuff I was testing out. You can build, delete or edit simple structures, and there is a short obstacle course that you can try to jump trough - but it proved to be quite a challenge for some people.
-I also implemented my own version of collision mechanics. Even though the collision system is simple it still works nicely even with moving platforms and such.</p>
+Project is written entirely in Zig, seems like a good combination with Raylib (which is written in C).</p>
+<p>The game is mainly just a playground of stuff I was testing out. You can build, delete or edit simple structures, and there is a short obstacle course that you can try to jump trough - but it proved to be quite a challenge for some people.</p>
+<p>The most interesting achievment I made in this project was the implementation of my custom collision + physics system. It allows for <em>player-environment</em>, <em>environment-player</em> interactions.
+The implementation is completely my own and is based on the idea of <a href="https://en.wikipedia.org/wiki/Minkowski_addition">Minkowski sum</a>, however I actually use just an aproximation of the sum, as that makes the system simpler and in some cases even more intuitive for the player.
+The player is represented by multiple spheres, which thanks to the aforementioned aproximation basically makes it a cylinder shape, environment is represented by boxes (<em>parallelograms</em> to be precise, they can be sloped).
+Functionality includes: player movement with <em>sliding</em>(!) and gravity, requesting which objects are touching given entity (used for determining whether the player is standing on the ground or is in the air), moving non-player entities that can collide and push the player if possible, programmer can also set if the player will stick to the given entity or not (aka <em>riding</em> mechanic used for elevators and moving platforms), there are of course standard body intersection functions too.</p>
 
 <h3 id="browser-version">
   Browser version
   <a href="#browser-version" class="hanchor" ariaLabel="Anchor"></a>
 </h3>
 <p><strong>Play in your browser!</strong>
-You can test the web version of the game below, all you need to do is click onto the game&rsquo;s frame. Requires WebAssembly and WebGL.</p>
-<iframe src="https://ondrej-richtr.github.io//games/raylib3d_project.html" title="Raylib 3D game, web version" width=640 height=360></iframe> 
-<p>I also recommned trying it in <a href="https://ondrej-richtr.github.io//games/raylib3d_project.html">FULLSCREEN.</a></p>
+You can test the web version of the game below, requires WebAssembly and WebGL.</p>
+<a href="https://ondrej-richtr.github.io//games/raylib3d_project.html" target="_blank" rel="noopener noreferrer">
+<img src="https://ondrej-richtr.github.io//raylib3d-play.jfif" alt="Raylib 3D game, web version" width="100%">
+</a>
 <p>The browser version is compiled using <a href="https://emscripten.org/">emscripten</a> in combination with Zig build system. It works okayish, emscripten automatically sets fps equal to your device refresh rate (usually 60), so the game runs slower than usual. It also works on mobile devices, but I didn&rsquo;t implement proper touch controls yet, so it isn&rsquo;t really playable there.</p>
 
 <h3 id="download">
@@ -133,9 +137,7 @@ Hold <code>Left Mouse</code> to build a structure and adjust it&rsquo;s size, <c
 <a href="https://ondrej-richtr.github.io//raylib3d-7.png"><img src="https://ondrej-richtr.github.io//raylib3d-7.png" alt="Raylib 3D game - screenshot 7" width="100%"></a>
 <a href="https://ondrej-richtr.github.io//raylib3d-6.png"><img src="https://ondrej-richtr.github.io//raylib3d-6.png" alt="Raylib 3D game - screenshot 6" width="100%"></a>
 <a href="https://ondrej-richtr.github.io//raylib3d-8.png"><img src="https://ondrej-richtr.github.io//raylib3d-8.png" alt="Raylib 3D game - screenshot 8" width="100%"></a></p>
-<p>I had a break from this project because of my studies, but I returned to it and work on it whenever I can.
-Currently I&rsquo;m working on proper player collision system and I also started to experiment with lighting.</p>
-<p>The long term goal is probably going to be a FPS game with good movement/collision mechanics. I also want to implement my own 3D mesh handling as Raylib is pretty limiting in this regard <em>(maybe the real goal would be to remove Raylib altogether?)</em>. Nicer in-game level editor would be great as well, but the existing one is usable too.</p>
+<p>Since I more enjoy programming my own rendering backends (see my <a href="/projects/target-practice/">Target shooting project</a>) I don&rsquo;t actively work on this project anymore. Otherwise the goal would be to improve the physics and in-game editor to the point that this project could be used as a simple FPS/Platformer game engine.</p>
 
       </div>
 
@@ -146,7 +148,7 @@ Currently I&rsquo;m working on proper player collision system and I also started
         </main>
         <footer class="site-footer">
 <p class="buildinfo">
-  <time datetime="2025-04-05 18:45:29 CEST">Site built on: 2025-04-05 18:45:29 CEST</time>
+  <time datetime="2025-04-18 17:46:49 CEST">Site built on: 2025-04-18 17:46:49 CEST</time>
   with <a href="https://gohugo.io">Hugo</a>, using <b>modified</b> theme <a href="https://manid2.github.io/hugo-xterm/">Hugo Xterm</a>.
 
   

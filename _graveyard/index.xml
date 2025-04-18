@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>_Graveyards on Ondřej Richtr - portfolio</title>
+    <link>https://ondrej-richtr.github.io/_graveyard/</link>
+    <description>Recent content in _Graveyards on Ondřej Richtr - portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+      <language>en</language><atom:link href="https://ondrej-richtr.github.io/_graveyard/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2.5D Side-scroller Game</title>
+      <link>https://ondrej-richtr.github.io/_graveyard/projects/raylib-side-scroller/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+
+      <guid>https://ondrej-richtr.github.io/_graveyard/projects/raylib-side-scroller/</guid>
+      <description>Just a simple side-scrolling game test. I wanted to try out Zig, which is a new modern programing language that I think is pretty nice for games, in combination with Raylib.
+During the short development of this project I realized that movement collisions are much easier if the player is able to move only on a grid. Also that drawing arbitrary 2.5D is not as easy as I thought, you can&amp;rsquo;t just layer sprites on top of eachother.</description>
+      <content>&lt;p&gt;Just a simple side-scrolling game test. I wanted to try out Zig, which is a new modern programing language that I think is pretty nice for games, in combination with &lt;a href=&#34;https://www.raylib.com/&#34;&gt;Raylib&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;During the short development of this project I realized that movement collisions are much easier if the player is able to move only on a grid.
+Also that drawing arbitrary 2.5D is not as easy as I thought, you can&amp;rsquo;t just layer sprites on top of eachother.&lt;/p&gt;
+
+&lt;h3 id=&#34;download&#34;&gt;
+  Download
+  &lt;a href=&#34;#download&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;You can download portable version for &lt;a href=&#34;https://ondrej-richtr.github.io//raylib-2d-v1.zip&#34;&gt;Windows x86_64 here (ZIP).&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: Should work on Linux too when executed through &lt;a href=&#34;https://www.winehq.org/&#34;&gt;Wine&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;controls&#34;&gt;
+  Controls
+  &lt;a href=&#34;#controls&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Arrows&lt;/code&gt; to move.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Space&lt;/code&gt; to jump.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Shift&lt;/code&gt; to attack the dummy.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Esc&lt;/code&gt; to exit the game.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;screenshots&#34;&gt;
+  Screenshots
+  &lt;a href=&#34;#screenshots&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://ondrej-richtr.github.io//raylib2d-1-crop.PNG&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//raylib2d-1-crop.PNG&#34; alt=&#34;Raylib side-scroller - screenshot 1&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://ondrej-richtr.github.io//raylib2d-2-crop.PNG&#34;&gt;&lt;img src=&#34;https://ondrej-richtr.github.io//raylib2d-2-crop.PNG&#34; alt=&#34;Raylib side-scroller - screenshot 2&#34; width=&#34;100%&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This project could serve as a basis if I ever decide to truly make a 2D game.&lt;/p&gt;
+</content>
+    </item>
+  </channel>
+</rss>

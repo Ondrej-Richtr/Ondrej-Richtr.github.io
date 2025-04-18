@@ -4,13 +4,13 @@
 <title>Target practice game :: Ondřej Richtr - portfolio</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Game core made using OpenGL, supposed to be first person target shooter." />
+<meta name="description" content="First-person shooter game made with custom rendering engine based on OpenGL/OpenGLES/WebGL." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://ondrej-richtr.github.io/projects/target-practice/" />
 <meta property="og:locale" content="en" />
 <meta property="og:title" content="Target practice game :: Ondřej Richtr - portfolio" />
-<meta property="og:description" content="Game core made using OpenGL, supposed to be first person target shooter." />
+<meta property="og:description" content="First-person shooter game made with custom rendering engine based on OpenGL/OpenGLES/WebGL." />
   <meta property="og:type" content="article" />
   <meta property="article:author" content="Ondřej Richtr - portfolio" />
 <meta property="og:url" content="https://ondrej-richtr.github.io/projects/target-practice/" />
@@ -77,18 +77,21 @@
         <h1 class="post-title"><a href="https://ondrej-richtr.github.io/projects/target-practice/">Target practice game</a></h1>
         <div class="post-meta">
           
-            <span>Year: 2025,</span>
+            <span>Started in: 2025,</span>
             <span>Programmed in:</span><span>&nbsp; <b>C&#43;&#43;</b></span>
           <br/>
             <span>Source: <a href="https://github.com/Ondrej-Richtr/opengl-game-core">https://github.com/Ondrej-Richtr/opengl-game-core</a></span><br/>
         </div>
-        <p class="post-description">Game core made using OpenGL, supposed to be first person target shooter.</p>
+        <p class="post-description">First-person shooter game made with custom rendering engine based on OpenGL/OpenGLES/WebGL.</p>
     </header>
       <div class="post-content">
         <p>This is my &ldquo;learn OpenGL properly&rdquo; project. Plus I also wanted to have some open source C++ project to show off.
-Besides that the goal is to make first person shooter, where you practice your aim and reflexes by shooting appearing targets.</p>
+Besides that the goal is to make first-person shooter, where you practice your aim and reflexes by shooting appearing targets.</p>
 <p>I was surprised how nice OpenGL API actually is and how fun can writing shader be.
-In addition it was nice opportunity to learn a lot about lighting, materials, 3D models and such.</p>
+In addition it was nice opportunity to learn a lot about lighting, materials, 3D models and such.
+For texture loading I use <a href="https://github.com/nothings/stb">stb-image.h</a>, for <code>.obj</code> 3D model loading I use <a href="https://github.com/syoyo/tinyobjloader-c">tinyobjloader-c</a>.</p>
+<p>The real challenge was to make the rendering engine work with each of OpenGL 3.3, OpenGLES 2.0 and WebGL.
+The only setback at this moment is that stencil buffers are not working with OpenGLES 2.0 on some GPUs<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
 
 <h3 id="web-demo">
   Web Demo
@@ -97,6 +100,7 @@ In addition it was nice opportunity to learn a lot about lighting, materials, 3D
 <a href="https://ondrej-richtr.github.io//games/shooting_practice.html" target="_blank" rel="noopener noreferrer">
 <img src="https://ondrej-richtr.github.io//target-play.jfif" alt="Target practice game demo" width="100%">
 </a>
+<p>This browser version is compiled using <a href="https://emscripten.org/">emscripten</a>. Since I anticipated this from the beginning it was pretty easy to make it work. Mouse movement sometimes glitches a bit in some browsers, I suspect it&rsquo;s a cursor locking issue caused by GLFW.</p>
 
 <h3 id="used-technology">
   Used technology
@@ -105,7 +109,7 @@ In addition it was nice opportunity to learn a lot about lighting, materials, 3D
 <ul>
 <li><strong>OpenGL + GLSL</strong> – I use OpenGL 3.3 for desktop builds and OpenGLES 2.0/WebGL1 for web build (and some older dekstops).</li>
 <li><a href="https://www.glfw.org/"><strong>GLFW3</strong></a> – Well known library that I used for window and mouse/keyboard input managing.</li>
-<li><a href="https://github.com/Immediate-Mode-UI/Nuklear"><strong>Nuklear</strong></a> – Immediate mode UI library I wanted to try out in this project.</li>
+<li><a href="https://github.com/Immediate-Mode-UI/Nuklear"><strong>Nuklear</strong></a> – Immediate mode UI library that I wanted to try out.</li>
 </ul>
 <p>As mentioned, the project is programmed in C++. I&rsquo;m going for C++17 and I use modern C++ where I see fit (smart pointers, constexpr, std::move&hellip;). However the design of OpenGL API makes it typically unnecessary.
 Personally I still prefer Zig over C++ or C. Zig would help dramatically with a lot of annoyances like C++ constructors, compile time execution and build system.</p>
@@ -128,12 +132,12 @@ Personally I still prefer Zig over C++ or C. Zig would help dramatically with a 
   Shaders
   <a href="#shaders" class="hanchor" ariaLabel="Anchor"></a>
 </h3>
-<p>Since I wanted this game to work on both desktop and in the browser, I&rsquo;m using OpenGL 3.3 or OpenGLES 2.0 depending on the platform. However GLSL version 330 core isn&rsquo;t really compatible with version 100, so you would need to write each shader in two versions and also keep them in sync. Yes, you can transpile between them, but in my experiments it didn&rsquo;t really work out, since it was very limiting (for example macros got expanded prematurely).</p>
+<p>Since I wanted this game to work on both desktop and in the browser, I&rsquo;m using OpenGL 3.3 or OpenGLES 2.0 or WebGL1 depending on the platform. However GLSL version 330 core isn&rsquo;t really compatible with version 100, so you would need to write each shader in two versions and also keep them in sync. Yes, you can transpile between them, but in my experiments it didn&rsquo;t really work out, since it was very limiting (for example macros got expanded prematurely).</p>
 <p>So in the end I decided to make my own preprocessor/include system, which was pretty succesful and currently I only need to write each shader once. It esentially just includes some lines to the shader&rsquo;s source code that differ based on the used OpenGL version. You also need to use specific macros in the shader source to do certain stuff:</p>
 <ul>
 <li><code>TEXTURE2D(myTextrue, pos)</code> instead of <code>texture(myTexture, pos)</code>/<code>texture2D(myTexture, pos)</code></li>
 <li>or <code>OUTPUT(outputColor)</code> to output a color from fragment shader</li>
-<li><code>IN_ATTR</code> for input attribute definitions and <code>OUT_ATTR</code> for output one.</li>
+<li><code>IN_ATTR</code> for input attribute definitions and <code>OUT_ATTR</code> for output ones.</li>
 </ul>
 <p>It also allows me to append arbitrary pieces of code to shaders, which is useful for including extra functionality into them based on some logic in the C++ code.</p>
 
@@ -142,6 +146,14 @@ Personally I still prefer Zig over C++ or C. Zig would help dramatically with a 
   <a href="#further-plans" class="hanchor" ariaLabel="Anchor"></a>
 </h3>
 <p>Further plans are obviously to finish the target shooting aspect of the game, include levels, moving targets and variety of other mechanics. Also I want the game to work on the web properly, improve the bare-bones html shell and fix cursor locking.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Works on Intel, but not on NVIDIA. Probably caused by drivers forcing combined depth-stencil renderbuffers, however those are sadly not possible with OpenGLES 2.0 :(&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 
       </div>
 
@@ -152,7 +164,7 @@ Personally I still prefer Zig over C++ or C. Zig would help dramatically with a 
         </main>
         <footer class="site-footer">
 <p class="buildinfo">
-  <time datetime="2025-04-05 18:45:29 CEST">Site built on: 2025-04-05 18:45:29 CEST</time>
+  <time datetime="2025-04-18 17:46:49 CEST">Site built on: 2025-04-18 17:46:49 CEST</time>
   with <a href="https://gohugo.io">Hugo</a>, using <b>modified</b> theme <a href="https://manid2.github.io/hugo-xterm/">Hugo Xterm</a>.
 
   
